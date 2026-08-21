@@ -19,8 +19,7 @@ public class BookService {
             new Book(104, "Django", "Adrian Holovaty", 550, true),
             new Book(105, "C Programming", "Dennis Ritchie", 400, true)
     ));
-
-    // Get all books
+    // Get all book
     public List<Book> getAllBooks() {
         return books;
     }

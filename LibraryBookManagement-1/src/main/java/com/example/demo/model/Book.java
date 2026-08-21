@@ -6,7 +6,6 @@ import jakarta.validation.constraints.Positive;
 public class Book {
 
     private int bookId;
-
     @NotBlank(message = "Book name is required")
     private String bookName;
 
@@ -15,13 +14,10 @@ public class Book {
 
     @Positive(message = "Price must be positive")
     private double price;
-
     private boolean available;
-
     public Book() {
         super();
     }
-
     public Book(int bookId, String bookName, String author,
                 double price, boolean available) {
         super();

@@ -26,8 +26,7 @@ public class BookController {
     public BookController(BookService bookService) {
         this.bookService = bookService;
     }
-
-    // Get all books
+    // Get all book
     @GetMapping
     public List<Book> getAllBooks() {
         return bookService.getAllBooks();

@@ -13,8 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @ControllerAdvice
 @RestController
 public class GlobalExceptionHandler {
-
-    // Book Not Found Exception
+    // Book Not Found Exceptions
     @ExceptionHandler(BookNotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
     public String handleBookNotFoundException(
