@@ -26,14 +26,14 @@ public class TicketController {
         this.ticketService = ticketService;
     }
 
-    // 1. Get all tickets
+    // Get all tickets
     @GetMapping
     public List<Ticket> getAllTickets() {
 
         return ticketService.getAllTickets();
     }
 
-    // 2. Add ticket
+    // Add ticket
     @PostMapping
     public Ticket addTicket(
             @Valid @RequestBody Ticket ticket) {
@@ -41,7 +41,7 @@ public class TicketController {
         return ticketService.addTicket(ticket);
     }
 
-    // 3. Search ticket by ID
+    // Search ticket by ID
     @GetMapping("/{ticketId}")
     public Ticket getTicketById(
             @PathVariable int ticketId) {
@@ -49,19 +49,16 @@ public class TicketController {
         return ticketService.getTicketById(ticketId);
     }
 
-    // 4. Update ticket
+    // Update ticket
     @PutMapping("/{ticketId}")
     public Ticket updateTicket(
             @PathVariable int ticketId,
             @Valid @RequestBody Ticket ticket) {
 
-        return ticketService.updateTicket(
-                ticketId,
-                ticket
-        );
+        return ticketService.updateTicket(ticketId, ticket);
     }
 
-    // 5. Delete ticket
+    // Delete ticket
     @DeleteMapping("/{ticketId}")
     public String deleteTicket(
             @PathVariable int ticketId) {

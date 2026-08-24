@@ -21,13 +21,12 @@ public class TicketService {
 
     ));
 
-    // 1. Get all tickets
+    // Get all tickets
     public List<Ticket> getAllTickets() {
-
         return tickets;
     }
 
-    // 2. Add ticket
+    // Add ticket
     public Ticket addTicket(Ticket ticket) {
 
         tickets.add(ticket);
@@ -35,7 +34,7 @@ public class TicketService {
         return ticket;
     }
 
-    // 3. Search ticket by ID
+    // Search ticket by ID
     public Ticket getTicketById(int ticketId) {
 
         return tickets.stream()
@@ -48,10 +47,8 @@ public class TicketService {
                 );
     }
 
-    // 4. Update ticket
-    public Ticket updateTicket(
-            int ticketId,
-            Ticket updatedTicket) {
+    // Update ticket
+    public Ticket updateTicket(int ticketId, Ticket updatedTicket) {
 
         Ticket ticket = getTicketById(ticketId);
 
@@ -63,7 +60,7 @@ public class TicketService {
         return ticket;
     }
 
-    // 5. Delete ticket
+    // Delete ticket
     public boolean deleteTicket(int ticketId) {
 
         Ticket ticket = getTicketById(ticketId);
