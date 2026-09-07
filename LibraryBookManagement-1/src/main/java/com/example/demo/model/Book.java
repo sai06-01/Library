@@ -4,10 +4,10 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Positive;
 
 public class Book {
-
+                                                                                                                                                                                                     
     private int bookId;
     @NotBlank(message = "Book name is required")
-    private String bookName;
+    private String bookName;                                                                                                  
 
     @NotBlank(message = "Author name is required")
     private String author;
