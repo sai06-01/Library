@@ -1,6 +1,5 @@
 package com.example.demo.company.config;
 
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -12,9 +11,13 @@ public class SwaggerConfig {
 
     @Bean
     public OpenAPI companyOpenAPI() {
-        return new OpenAPI() .info(new Info()
-                        .title("Company Management API")
-                        .version("1.0")
-                        .description("Company Management REST API"));
+
+        return new OpenAPI()
+                .info(
+                        new Info()
+                                .title("Company Management API")
+                                .version("1.0")
+                                .description(
+                                        "REST API for Company Management"));
     }
 }

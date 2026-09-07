@@ -11,39 +11,36 @@ public class CompanyMapper {
 
     public Company toEntity(CompanyRequestDto dto) {
 
-        return Company.builder()
-                .name(dto.getName())
-                .email(dto.getEmail())
-                .password(dto.getPassword())
-                .build();
-    }
+        Company company = new Company();
 
-    public CompanyResponseDto toResponseDto(Company company) {
+        company.setName(dto.getName());
+        company.setEmail(dto.getEmail());
+        company.setPassword(dto.getPassword());
 
-        return CompanyResponseDto.builder()
-                .id(company.getId())
-                .name(company.getName())
-                .email(company.getEmail())
-                .version(company.getVersion())
-                .createdDate(company.getCreatedDate())
-                .createdBy(company.getCreatedBy())
-                .updatedDate(company.getUpdatedDate())
-                .updatedBy(company.getUpdatedBy())
-                .build();
+        return company;
     }
 
     public void updateEntity(
-            Company company,
-            CompanyRequestDto dto) {
+            CompanyRequestDto dto,
+            Company company) {
 
         company.setName(dto.getName());
-
         company.setEmail(dto.getEmail());
+        company.setPassword(dto.getPassword());
+    }
 
-        if (dto.getPassword() != null
-                && !dto.getPassword().isBlank()) {
+    public CompanyResponseDto toResponseDto(
+            Company company) {
 
-            company.setPassword(dto.getPassword());
-        }
+        return new CompanyResponseDto(
+                company.getId(),
+                company.getName(),
+                company.getEmail(),
+                company.getVersion(),
+                company.getCreatedDate(),
+                company.getCreatedBy(),
+                company.getUpdatedDate(),
+                company.getUpdatedBy()
+        );
     }
 }

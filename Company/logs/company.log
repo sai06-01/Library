@@ -63,3 +63,1295 @@
 2026-09-07T10:53:51.591+05:30  INFO 10892 --- [Company] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoints beneath base path '/actuator'
 2026-09-07T10:53:51.999+05:30  INFO 10892 --- [Company] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
 2026-09-07T10:53:52.070+05:30  INFO 10892 --- [Company] [main] com.example.demo.CompanyApplication      : Started CompanyApplication in 18.628 seconds (process running for 19.975)
+2026-09-07T16:12:36.271+05:30  INFO 8336 --- [Company] [main] com.example.demo.CompanyApplication      : Starting CompanyApplication using Java 17.0.12 with PID 8336 (C:\Users\saipr\git\Library\Company\target\classes started by saipr in C:\Users\saipr\git\Library\Company)
+2026-09-07T16:12:36.284+05:30 DEBUG 8336 --- [Company] [main] com.example.demo.CompanyApplication      : Running with Spring Boot v3.5.5, Spring v6.2.10
+2026-09-07T16:12:36.287+05:30  INFO 8336 --- [Company] [main] com.example.demo.CompanyApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-09-07T16:12:42.309+05:30  INFO 8336 --- [Company] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-07T16:12:42.635+05:30  INFO 8336 --- [Company] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 282 ms. Found 1 JPA repository interface.
+2026-09-07T16:12:46.143+05:30  INFO 8336 --- [Company] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-09-07T16:12:46.214+05:30  INFO 8336 --- [Company] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-07T16:12:46.216+05:30  INFO 8336 --- [Company] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2026-09-07T16:12:46.697+05:30  INFO 8336 --- [Company] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-07T16:12:46.700+05:30  INFO 8336 --- [Company] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 10185 ms
+2026-09-07T16:12:48.443+05:30  INFO 8336 --- [Company] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-09-07T16:12:48.810+05:30  INFO 8336 --- [Company] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2026-09-07T16:12:49.124+05:30  INFO 8336 --- [Company] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-09-07T16:12:51.237+05:30  INFO 8336 --- [Company] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-07T16:12:51.450+05:30  INFO 8336 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-07T16:12:52.314+05:30  INFO 8336 --- [Company] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@390a07a0
+2026-09-07T16:12:52.324+05:30  INFO 8336 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-07T16:12:52.735+05:30  INFO 8336 --- [Company] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-07T16:12:56.420+05:30  INFO 8336 --- [Company] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-07T16:12:56.805+05:30  WARN 8336 --- [Company] [main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "
+    alter table company 
+       add column id bigint not null auto_increment" via JDBC [Incorrect table definition; there can be only one auto column and it must be defined as a key]
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    alter table company 
+       add column id bigint not null auto_increment" via JDBC [Incorrect table definition; there can be only one auto column and it must be defined as a key]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:576) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:516) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.migrateTable(AbstractSchemaMigrator.java:334) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:84) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:233) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:112) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:280) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:324) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:463) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1517) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.10.jar:6.2.10]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.10.jar:6.2.10]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.10.jar:6.2.10]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.10.jar:6.2.10]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.10.jar:6.2.10]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.5.jar:3.5.5]
+	at com.example.demo.CompanyApplication.main(CompanyApplication.java:10) ~[classes/:na]
+Caused by: java.sql.SQLSyntaxErrorException: Incorrect table definition; there can be only one auto column and it must be defined as a key
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112) ~[mysql-connector-j-9.4.0.jar:9.4.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.4.0.jar:9.4.0]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:837) ~[mysql-connector-j-9.4.0.jar:9.4.0]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:685) ~[mysql-connector-j-9.4.0.jar:9.4.0]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95) ~[HikariCP-6.3.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-6.3.2.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80) ~[hibernate-core-6.6.26.Final.jar:6.6.26.Final]
+	... 37 common frames omitted
+
+2026-09-07T16:12:56.988+05:30  INFO 8336 --- [Company] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-07T16:12:59.063+05:30  WARN 8336 --- [Company] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-07T16:13:02.049+05:30  INFO 8336 --- [Company] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoints beneath base path '/actuator'
+2026-09-07T16:13:02.605+05:30  INFO 8336 --- [Company] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-09-07T16:13:02.674+05:30  INFO 8336 --- [Company] [main] com.example.demo.CompanyApplication      : Started CompanyApplication in 28.449 seconds (process running for 29.679)
+2026-09-07T16:21:02.347+05:30  INFO 37740 --- [Company] [main] com.example.demo.CompanyApplication      : Starting CompanyApplication using Java 17.0.12 with PID 37740 (C:\Users\saipr\git\Library\Company\target\classes started by saipr in C:\Users\saipr\git\Library\Company)
+2026-09-07T16:21:02.357+05:30 DEBUG 37740 --- [Company] [main] com.example.demo.CompanyApplication      : Running with Spring Boot v3.5.5, Spring v6.2.10
+2026-09-07T16:21:02.362+05:30  INFO 37740 --- [Company] [main] com.example.demo.CompanyApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-09-07T16:21:07.271+05:30  INFO 37740 --- [Company] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-07T16:21:07.504+05:30  INFO 37740 --- [Company] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 185 ms. Found 1 JPA repository interface.
+2026-09-07T16:21:10.850+05:30  INFO 37740 --- [Company] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-09-07T16:21:10.924+05:30  INFO 37740 --- [Company] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-07T16:21:10.927+05:30  INFO 37740 --- [Company] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2026-09-07T16:21:11.381+05:30  INFO 37740 --- [Company] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-07T16:21:11.384+05:30  INFO 37740 --- [Company] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 8816 ms
+2026-09-07T16:21:12.941+05:30  INFO 37740 --- [Company] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-09-07T16:21:13.325+05:30  INFO 37740 --- [Company] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2026-09-07T16:21:13.582+05:30  INFO 37740 --- [Company] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-09-07T16:21:15.193+05:30  INFO 37740 --- [Company] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-07T16:21:15.363+05:30  INFO 37740 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-07T16:21:16.138+05:30  INFO 37740 --- [Company] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@33568e26
+2026-09-07T16:21:16.147+05:30  INFO 37740 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-07T16:21:16.495+05:30  INFO 37740 --- [Company] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-07T16:21:19.508+05:30  INFO 37740 --- [Company] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-07T16:21:19.890+05:30  INFO 37740 --- [Company] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-07T16:21:21.544+05:30  WARN 37740 --- [Company] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-07T16:21:24.299+05:30  INFO 37740 --- [Company] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoints beneath base path '/actuator'
+2026-09-07T16:21:24.719+05:30  INFO 37740 --- [Company] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-09-07T16:21:24.772+05:30  INFO 37740 --- [Company] [main] com.example.demo.CompanyApplication      : Started CompanyApplication in 24.133 seconds (process running for 25.15)
+2026-09-07T17:46:19.319+05:30  INFO 22496 --- [Company] [main] com.example.demo.CompanyApplication      : Starting CompanyApplication using Java 17.0.12 with PID 22496 (C:\Users\saipr\git\Library\Company\target\classes started by saipr in C:\Users\saipr\git\Library\Company)
+2026-09-07T17:46:19.326+05:30 DEBUG 22496 --- [Company] [main] com.example.demo.CompanyApplication      : Running with Spring Boot v3.5.5, Spring v6.2.10
+2026-09-07T17:46:19.332+05:30  INFO 22496 --- [Company] [main] com.example.demo.CompanyApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-09-07T17:46:20.042+05:30  WARN 22496 --- [Company] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.example.demo.CompanyApplication]
+2026-09-07T17:46:20.875+05:30 ERROR 22496 --- [Company] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.example.demo.CompanyApplication]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:194) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:418) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.5.jar:3.5.5]
+	at com.example.demo.CompanyApplication.main(CompanyApplication.java:10) ~[classes/:na]
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'companyLogger' for bean class [com.example.demo.company.logger.CompanyLogger] conflicts with existing, non-compatible bean definition of same name and class [com.example.demo.company.config.CompanyLogger]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:361) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:288) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:128) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:346) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:281) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:204) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:172) ~[spring-context-6.2.10.jar:6.2.10]
+	... 13 common frames omitted
+
+2026-09-07T17:48:35.788+05:30  INFO 37392 --- [Company] [main] com.example.demo.CompanyApplication      : Starting CompanyApplication using Java 17.0.12 with PID 37392 (C:\Users\saipr\git\Library\Company\target\classes started by saipr in C:\Users\saipr\git\Library\Company)
+2026-09-07T17:48:35.798+05:30 DEBUG 37392 --- [Company] [main] com.example.demo.CompanyApplication      : Running with Spring Boot v3.5.5, Spring v6.2.10
+2026-09-07T17:48:35.802+05:30  INFO 37392 --- [Company] [main] com.example.demo.CompanyApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-09-07T17:48:36.614+05:30  WARN 37392 --- [Company] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.example.demo.CompanyApplication]
+2026-09-07T17:48:37.229+05:30 ERROR 37392 --- [Company] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.example.demo.CompanyApplication]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:194) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:418) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.5.jar:3.5.5]
+	at com.example.demo.CompanyApplication.main(CompanyApplication.java:10) ~[classes/:na]
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'companyLogger' for bean class [com.example.demo.company.logger.CompanyLogger] conflicts with existing, non-compatible bean definition of same name and class [com.example.demo.company.config.CompanyLogger]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:361) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:288) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:128) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:346) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:281) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:204) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:172) ~[spring-context-6.2.10.jar:6.2.10]
+	... 13 common frames omitted
+
+2026-09-07T17:49:58.943+05:30  INFO 49876 --- [Company] [main] com.example.demo.CompanyApplication      : Starting CompanyApplication using Java 17.0.12 with PID 49876 (C:\Users\saipr\git\Library\Company\target\classes started by saipr in C:\Users\saipr\git\Library\Company)
+2026-09-07T17:49:58.954+05:30 DEBUG 49876 --- [Company] [main] com.example.demo.CompanyApplication      : Running with Spring Boot v3.5.5, Spring v6.2.10
+2026-09-07T17:49:58.957+05:30  INFO 49876 --- [Company] [main] com.example.demo.CompanyApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-09-07T17:50:02.628+05:30  INFO 49876 --- [Company] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-07T17:50:02.762+05:30  INFO 49876 --- [Company] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 94 ms. Found 1 JPA repository interface.
+2026-09-07T17:50:05.512+05:30  INFO 49876 --- [Company] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-09-07T17:50:05.558+05:30  INFO 49876 --- [Company] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-07T17:50:05.558+05:30  INFO 49876 --- [Company] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2026-09-07T17:50:05.740+05:30  INFO 49876 --- [Company] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-07T17:50:05.743+05:30  INFO 49876 --- [Company] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6602 ms
+2026-09-07T17:50:06.611+05:30  INFO 49876 --- [Company] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-09-07T17:50:06.818+05:30  INFO 49876 --- [Company] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2026-09-07T17:50:06.951+05:30  INFO 49876 --- [Company] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-09-07T17:50:08.126+05:30  INFO 49876 --- [Company] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-07T17:50:08.263+05:30  INFO 49876 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-07T17:50:08.919+05:30  INFO 49876 --- [Company] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@d677be9
+2026-09-07T17:50:08.928+05:30  INFO 49876 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-07T17:50:09.122+05:30  INFO 49876 --- [Company] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-07T17:50:10.989+05:30  INFO 49876 --- [Company] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-07T17:50:11.151+05:30  INFO 49876 --- [Company] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-07T17:50:12.060+05:30  WARN 49876 --- [Company] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'companyController' defined in file [C:\Users\saipr\git\Library\Company\target\classes\com\example\demo\company\controller\CompanyController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'companyServiceImpl' defined in file [C:\Users\saipr\git\Library\Company\target\classes\com\example\demo\company\service\CompanyServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 3: No qualifying bean of type 'java.util.logging.Logger' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2026-09-07T17:50:12.061+05:30  INFO 49876 --- [Company] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-07T17:50:12.075+05:30  INFO 49876 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-07T17:50:12.105+05:30  INFO 49876 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-07T17:50:12.113+05:30  INFO 49876 --- [Company] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-09-07T17:50:12.177+05:30  INFO 49876 --- [Company] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-09-07T17:50:12.242+05:30 ERROR 49876 --- [Company] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 3 of constructor in com.example.demo.company.service.CompanyServiceImpl required a bean of type 'java.util.logging.Logger' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'java.util.logging.Logger' in your configuration.
+
+2026-09-07T18:05:44.445+05:30  INFO 21240 --- [Company] [main] com.example.demo.CompanyApplication      : Starting CompanyApplication using Java 17.0.12 with PID 21240 (C:\Users\saipr\git\Library\Company\target\classes started by saipr in C:\Users\saipr\git\Library\Company)
+2026-09-07T18:05:44.456+05:30 DEBUG 21240 --- [Company] [main] com.example.demo.CompanyApplication      : Running with Spring Boot v3.5.5, Spring v6.2.10
+2026-09-07T18:05:44.458+05:30  INFO 21240 --- [Company] [main] com.example.demo.CompanyApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-09-07T18:05:48.668+05:30  INFO 21240 --- [Company] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-07T18:05:48.833+05:30  INFO 21240 --- [Company] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 129 ms. Found 1 JPA repository interface.
+2026-09-07T18:05:50.896+05:30  INFO 21240 --- [Company] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-09-07T18:05:50.937+05:30  INFO 21240 --- [Company] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-07T18:05:50.938+05:30  INFO 21240 --- [Company] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2026-09-07T18:05:51.155+05:30  INFO 21240 --- [Company] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-07T18:05:51.156+05:30  INFO 21240 --- [Company] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6511 ms
+2026-09-07T18:05:52.054+05:30  INFO 21240 --- [Company] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-09-07T18:05:52.302+05:30  INFO 21240 --- [Company] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2026-09-07T18:05:52.470+05:30  INFO 21240 --- [Company] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-09-07T18:05:53.863+05:30  INFO 21240 --- [Company] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-07T18:05:54.010+05:30  INFO 21240 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-07T18:05:54.718+05:30  INFO 21240 --- [Company] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4a3509b0
+2026-09-07T18:05:54.726+05:30  INFO 21240 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-07T18:05:54.954+05:30  INFO 21240 --- [Company] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-07T18:05:56.872+05:30  INFO 21240 --- [Company] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-07T18:05:57.006+05:30  INFO 21240 --- [Company] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-07T18:05:57.905+05:30  WARN 21240 --- [Company] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityFilterChain' defined in class path resource [com/example/demo/company/config/SecurityConfig.class]: Unsatisfied dependency expressed through method 'securityFilterChain' parameter 0: No qualifying bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2026-09-07T18:05:57.910+05:30  INFO 21240 --- [Company] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-07T18:05:57.920+05:30  INFO 21240 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-07T18:05:57.946+05:30  INFO 21240 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-07T18:05:57.954+05:30  INFO 21240 --- [Company] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-09-07T18:05:58.012+05:30  INFO 21240 --- [Company] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-09-07T18:05:58.106+05:30 ERROR 21240 --- [Company] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method securityFilterChain in com.example.demo.company.config.SecurityConfig required a bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' in your configuration.
+
+2026-09-07T18:08:22.540+05:30  INFO 34808 --- [Company] [main] com.example.demo.CompanyApplication      : Starting CompanyApplication using Java 17.0.12 with PID 34808 (C:\Users\saipr\git\Library\Company\target\classes started by saipr in C:\Users\saipr\git\Library\Company)
+2026-09-07T18:08:22.545+05:30 DEBUG 34808 --- [Company] [main] com.example.demo.CompanyApplication      : Running with Spring Boot v3.5.5, Spring v6.2.10
+2026-09-07T18:08:22.547+05:30  INFO 34808 --- [Company] [main] com.example.demo.CompanyApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-09-07T18:08:26.280+05:30  INFO 34808 --- [Company] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-07T18:08:26.466+05:30  INFO 34808 --- [Company] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 151 ms. Found 1 JPA repository interface.
+2026-09-07T18:08:29.202+05:30  INFO 34808 --- [Company] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-09-07T18:08:29.259+05:30  INFO 34808 --- [Company] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-07T18:08:29.261+05:30  INFO 34808 --- [Company] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2026-09-07T18:08:29.546+05:30  INFO 34808 --- [Company] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-07T18:08:29.549+05:30  INFO 34808 --- [Company] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6872 ms
+2026-09-07T18:08:30.736+05:30  INFO 34808 --- [Company] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-09-07T18:08:31.062+05:30  INFO 34808 --- [Company] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2026-09-07T18:08:31.238+05:30  INFO 34808 --- [Company] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-09-07T18:08:32.480+05:30  INFO 34808 --- [Company] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-07T18:08:32.622+05:30  INFO 34808 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-07T18:08:33.357+05:30  INFO 34808 --- [Company] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3d7314b3
+2026-09-07T18:08:33.368+05:30  INFO 34808 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-07T18:08:33.625+05:30  INFO 34808 --- [Company] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-07T18:08:35.447+05:30  INFO 34808 --- [Company] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-07T18:08:35.558+05:30  INFO 34808 --- [Company] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-07T18:08:36.371+05:30  WARN 34808 --- [Company] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityFilterChain' defined in class path resource [com/example/demo/company/config/SecurityConfig.class]: Unsatisfied dependency expressed through method 'securityFilterChain' parameter 0: No qualifying bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2026-09-07T18:08:36.372+05:30  INFO 34808 --- [Company] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-07T18:08:36.381+05:30  INFO 34808 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-07T18:08:36.407+05:30  INFO 34808 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-07T18:08:36.413+05:30  INFO 34808 --- [Company] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-09-07T18:08:36.473+05:30  INFO 34808 --- [Company] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-09-07T18:08:36.544+05:30 ERROR 34808 --- [Company] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method securityFilterChain in com.example.demo.company.config.SecurityConfig required a bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' in your configuration.
+
+2026-09-07T18:09:05.563+05:30  INFO 13632 --- [Company] [main] com.example.demo.CompanyApplication      : Starting CompanyApplication using Java 17.0.12 with PID 13632 (C:\Users\saipr\git\Library\Company\target\classes started by saipr in C:\Users\saipr\git\Library\Company)
+2026-09-07T18:09:05.570+05:30 DEBUG 13632 --- [Company] [main] com.example.demo.CompanyApplication      : Running with Spring Boot v3.5.5, Spring v6.2.10
+2026-09-07T18:09:05.573+05:30  INFO 13632 --- [Company] [main] com.example.demo.CompanyApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-09-07T18:09:09.460+05:30  INFO 13632 --- [Company] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-07T18:09:09.674+05:30  INFO 13632 --- [Company] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 175 ms. Found 1 JPA repository interface.
+2026-09-07T18:09:12.386+05:30  INFO 13632 --- [Company] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-09-07T18:09:12.441+05:30  INFO 13632 --- [Company] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-07T18:09:12.442+05:30  INFO 13632 --- [Company] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2026-09-07T18:09:12.833+05:30  INFO 13632 --- [Company] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-07T18:09:12.835+05:30  INFO 13632 --- [Company] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 7083 ms
+2026-09-07T18:09:13.734+05:30  INFO 13632 --- [Company] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-09-07T18:09:13.981+05:30  INFO 13632 --- [Company] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2026-09-07T18:09:14.141+05:30  INFO 13632 --- [Company] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-09-07T18:09:15.270+05:30  INFO 13632 --- [Company] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-07T18:09:15.393+05:30  INFO 13632 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-07T18:09:16.014+05:30  INFO 13632 --- [Company] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1c459c28
+2026-09-07T18:09:16.023+05:30  INFO 13632 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-07T18:09:16.302+05:30  INFO 13632 --- [Company] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-07T18:09:18.596+05:30  INFO 13632 --- [Company] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-07T18:09:18.768+05:30  INFO 13632 --- [Company] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-07T18:09:19.813+05:30  WARN 13632 --- [Company] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityFilterChain' defined in class path resource [com/example/demo/company/config/SecurityConfig.class]: Unsatisfied dependency expressed through method 'securityFilterChain' parameter 0: No qualifying bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2026-09-07T18:09:19.816+05:30  INFO 13632 --- [Company] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-07T18:09:19.885+05:30  INFO 13632 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-07T18:09:19.925+05:30  INFO 13632 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-07T18:09:19.936+05:30  INFO 13632 --- [Company] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-09-07T18:09:19.994+05:30  INFO 13632 --- [Company] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-09-07T18:09:20.052+05:30 ERROR 13632 --- [Company] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method securityFilterChain in com.example.demo.company.config.SecurityConfig required a bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' in your configuration.
+
+2026-09-07T18:09:50.378+05:30  INFO 47060 --- [Company] [main] com.example.demo.CompanyApplication      : Starting CompanyApplication using Java 17.0.12 with PID 47060 (C:\Users\saipr\git\Library\Company\target\classes started by saipr in C:\Users\saipr\git\Library\Company)
+2026-09-07T18:09:50.385+05:30 DEBUG 47060 --- [Company] [main] com.example.demo.CompanyApplication      : Running with Spring Boot v3.5.5, Spring v6.2.10
+2026-09-07T18:09:50.390+05:30  INFO 47060 --- [Company] [main] com.example.demo.CompanyApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-09-07T18:09:51.034+05:30  WARN 47060 --- [Company] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.example.demo.CompanyApplication]
+2026-09-07T18:09:51.609+05:30 ERROR 47060 --- [Company] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.example.demo.CompanyApplication]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:194) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:418) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.5.jar:3.5.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.5.jar:3.5.5]
+	at com.example.demo.CompanyApplication.main(CompanyApplication.java:10) ~[classes/:na]
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'companyLogger' for bean class [com.example.demo.company.logger.CompanyLogger] conflicts with existing, non-compatible bean definition of same name and class [com.example.demo.company.config.CompanyLogger]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:361) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:288) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:128) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:346) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:281) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:204) ~[spring-context-6.2.10.jar:6.2.10]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:172) ~[spring-context-6.2.10.jar:6.2.10]
+	... 13 common frames omitted
+
+2026-09-07T18:11:05.258+05:30  INFO 14272 --- [Company] [main] com.example.demo.CompanyApplication      : Starting CompanyApplication using Java 17.0.12 with PID 14272 (C:\Users\saipr\git\Library\Company\target\classes started by saipr in C:\Users\saipr\git\Library\Company)
+2026-09-07T18:11:05.278+05:30 DEBUG 14272 --- [Company] [main] com.example.demo.CompanyApplication      : Running with Spring Boot v3.5.5, Spring v6.2.10
+2026-09-07T18:11:05.285+05:30  INFO 14272 --- [Company] [main] com.example.demo.CompanyApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-09-07T18:11:11.135+05:30  INFO 14272 --- [Company] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-07T18:11:11.439+05:30  INFO 14272 --- [Company] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 247 ms. Found 1 JPA repository interface.
+2026-09-07T18:11:14.178+05:30  INFO 14272 --- [Company] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-09-07T18:11:14.230+05:30  INFO 14272 --- [Company] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-07T18:11:14.232+05:30  INFO 14272 --- [Company] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2026-09-07T18:11:14.517+05:30  INFO 14272 --- [Company] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-07T18:11:14.519+05:30  INFO 14272 --- [Company] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 8831 ms
+2026-09-07T18:11:15.599+05:30  INFO 14272 --- [Company] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-09-07T18:11:15.918+05:30  INFO 14272 --- [Company] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2026-09-07T18:11:16.092+05:30  INFO 14272 --- [Company] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-09-07T18:11:17.795+05:30  INFO 14272 --- [Company] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-07T18:11:17.966+05:30  INFO 14272 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-07T18:11:18.741+05:30  INFO 14272 --- [Company] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@30c03473
+2026-09-07T18:11:18.755+05:30  INFO 14272 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-07T18:11:19.002+05:30  INFO 14272 --- [Company] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-07T18:11:20.904+05:30  INFO 14272 --- [Company] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-07T18:11:21.018+05:30  INFO 14272 --- [Company] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-07T18:11:21.861+05:30  WARN 14272 --- [Company] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityFilterChain' defined in class path resource [com/example/demo/company/config/SecurityConfig.class]: Unsatisfied dependency expressed through method 'securityFilterChain' parameter 0: No qualifying bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2026-09-07T18:11:21.863+05:30  INFO 14272 --- [Company] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-07T18:11:21.876+05:30  INFO 14272 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-07T18:11:21.906+05:30  INFO 14272 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-07T18:11:21.914+05:30  INFO 14272 --- [Company] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-09-07T18:11:21.968+05:30  INFO 14272 --- [Company] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-09-07T18:11:22.036+05:30 ERROR 14272 --- [Company] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method securityFilterChain in com.example.demo.company.config.SecurityConfig required a bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' in your configuration.
+
+2026-09-07T18:15:53.234+05:30  INFO 25504 --- [Company] [main] com.example.demo.CompanyApplication      : Starting CompanyApplication using Java 17.0.12 with PID 25504 (C:\Users\saipr\git\Library\Company\target\classes started by saipr in C:\Users\saipr\git\Library\Company)
+2026-09-07T18:15:53.239+05:30 DEBUG 25504 --- [Company] [main] com.example.demo.CompanyApplication      : Running with Spring Boot v3.5.5, Spring v6.2.10
+2026-09-07T18:15:53.241+05:30  INFO 25504 --- [Company] [main] com.example.demo.CompanyApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-09-07T18:15:56.829+05:30  INFO 25504 --- [Company] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-07T18:15:57.039+05:30  INFO 25504 --- [Company] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 174 ms. Found 1 JPA repository interface.
+2026-09-07T18:15:59.781+05:30  INFO 25504 --- [Company] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-09-07T18:15:59.855+05:30  INFO 25504 --- [Company] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-07T18:15:59.860+05:30  INFO 25504 --- [Company] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2026-09-07T18:16:00.227+05:30  INFO 25504 --- [Company] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-07T18:16:00.230+05:30  INFO 25504 --- [Company] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6862 ms
+2026-09-07T18:16:01.363+05:30  INFO 25504 --- [Company] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-09-07T18:16:01.698+05:30  INFO 25504 --- [Company] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2026-09-07T18:16:01.897+05:30  INFO 25504 --- [Company] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-09-07T18:16:03.316+05:30  INFO 25504 --- [Company] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-07T18:16:03.464+05:30  INFO 25504 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-07T18:16:04.190+05:30  INFO 25504 --- [Company] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@43ee1cf7
+2026-09-07T18:16:04.203+05:30  INFO 25504 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-07T18:16:04.525+05:30  INFO 25504 --- [Company] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-07T18:16:06.814+05:30  INFO 25504 --- [Company] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-07T18:16:06.936+05:30  INFO 25504 --- [Company] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-07T18:16:08.007+05:30  WARN 25504 --- [Company] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityFilterChain' defined in class path resource [com/example/demo/company/config/SecurityConfig.class]: Unsatisfied dependency expressed through method 'securityFilterChain' parameter 0: No qualifying bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2026-09-07T18:16:08.009+05:30  INFO 25504 --- [Company] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-07T18:16:08.024+05:30  INFO 25504 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-07T18:16:08.051+05:30  INFO 25504 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-07T18:16:08.064+05:30  INFO 25504 --- [Company] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-09-07T18:16:08.138+05:30  INFO 25504 --- [Company] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-09-07T18:16:08.232+05:30 ERROR 25504 --- [Company] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method securityFilterChain in com.example.demo.company.config.SecurityConfig required a bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' in your configuration.
+
+2026-09-07T18:17:51.892+05:30  INFO 34744 --- [Company] [main] com.example.demo.CompanyApplication      : Starting CompanyApplication using Java 17.0.12 with PID 34744 (C:\Users\saipr\git\Library\Company\target\classes started by saipr in C:\Users\saipr\git\Library\Company)
+2026-09-07T18:17:51.898+05:30 DEBUG 34744 --- [Company] [main] com.example.demo.CompanyApplication      : Running with Spring Boot v3.5.5, Spring v6.2.10
+2026-09-07T18:17:51.899+05:30  INFO 34744 --- [Company] [main] com.example.demo.CompanyApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-09-07T18:17:55.773+05:30  INFO 34744 --- [Company] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-07T18:17:55.958+05:30  INFO 34744 --- [Company] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 144 ms. Found 1 JPA repository interface.
+2026-09-07T18:17:58.473+05:30  INFO 34744 --- [Company] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-09-07T18:17:58.511+05:30  INFO 34744 --- [Company] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-07T18:17:58.513+05:30  INFO 34744 --- [Company] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2026-09-07T18:17:58.750+05:30  INFO 34744 --- [Company] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-07T18:17:58.752+05:30  INFO 34744 --- [Company] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6705 ms
+2026-09-07T18:17:59.646+05:30  INFO 34744 --- [Company] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-09-07T18:17:59.847+05:30  INFO 34744 --- [Company] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2026-09-07T18:18:00.005+05:30  INFO 34744 --- [Company] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-09-07T18:18:01.167+05:30  INFO 34744 --- [Company] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-07T18:18:01.318+05:30  INFO 34744 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-07T18:18:01.957+05:30  INFO 34744 --- [Company] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1786150f
+2026-09-07T18:18:01.965+05:30  INFO 34744 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-07T18:18:02.141+05:30  INFO 34744 --- [Company] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-07T18:18:04.009+05:30  INFO 34744 --- [Company] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-07T18:18:04.129+05:30  INFO 34744 --- [Company] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-07T18:18:05.540+05:30  WARN 34744 --- [Company] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-07T18:18:06.740+05:30  INFO 34744 --- [Company] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoints beneath base path '/actuator'
+2026-09-07T18:18:06.906+05:30  WARN 34744 --- [Company] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 35f52c8e-463b-4bba-a0b8-aa50a55ba56d
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-09-07T18:18:06.947+05:30  INFO 34744 --- [Company] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-09-07T18:18:08.830+05:30  INFO 34744 --- [Company] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-09-07T18:18:08.878+05:30  INFO 34744 --- [Company] [main] com.example.demo.CompanyApplication      : Started CompanyApplication in 18.277 seconds (process running for 19.048)
+2026-09-07T18:19:58.345+05:30  INFO 34744 --- [Company] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-07T18:19:58.373+05:30  INFO 34744 --- [Company] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-07T18:19:58.471+05:30  INFO 34744 --- [Company] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 91 ms
+2026-09-07T18:20:01.807+05:30  WARN 34744 --- [Company] [http-nio-8080-exec-2] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [629] milliseconds.
+2026-09-07T18:20:16.983+05:30  INFO 34744 --- [Company] [http-nio-8080-exec-10] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 2521 ms
+2026-09-07T18:31:05.000+05:30  INFO 56808 --- [Company] [main] com.example.demo.CompanyApplication      : Starting CompanyApplication using Java 17.0.12 with PID 56808 (C:\Users\saipr\git\Library\Company\target\classes started by saipr in C:\Users\saipr\git\Library\Company)
+2026-09-07T18:31:05.010+05:30 DEBUG 56808 --- [Company] [main] com.example.demo.CompanyApplication      : Running with Spring Boot v3.5.5, Spring v6.2.10
+2026-09-07T18:31:05.013+05:30  INFO 56808 --- [Company] [main] com.example.demo.CompanyApplication      : The following 1 profile is active: "dev"
+2026-09-07T18:31:09.383+05:30  INFO 56808 --- [Company] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-07T18:31:09.558+05:30  INFO 56808 --- [Company] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 127 ms. Found 1 JPA repository interface.
+2026-09-07T18:31:17.659+05:30  INFO 56808 --- [Company] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-09-07T18:31:17.784+05:30  INFO 56808 --- [Company] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-07T18:31:17.788+05:30  INFO 56808 --- [Company] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2026-09-07T18:31:19.636+05:30  INFO 56808 --- [Company] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-07T18:31:19.646+05:30  INFO 56808 --- [Company] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 14428 ms
+2026-09-07T18:31:23.744+05:30  INFO 56808 --- [Company] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-09-07T18:31:24.904+05:30  INFO 56808 --- [Company] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2026-09-07T18:31:25.382+05:30  INFO 56808 --- [Company] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-09-07T18:31:28.428+05:30  INFO 56808 --- [Company] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-07T18:31:28.691+05:30  INFO 56808 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-07T18:31:29.929+05:30  INFO 56808 --- [Company] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@425f94d7
+2026-09-07T18:31:29.943+05:30  INFO 56808 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-07T18:31:30.545+05:30  INFO 56808 --- [Company] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-07T18:31:35.396+05:30  INFO 56808 --- [Company] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-07T18:31:35.553+05:30  INFO 56808 --- [Company] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-07T18:31:37.370+05:30  WARN 56808 --- [Company] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-07T18:31:38.615+05:30  INFO 56808 --- [Company] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoints beneath base path '/actuator'
+2026-09-07T18:31:38.765+05:30  WARN 56808 --- [Company] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: aa61e3d9-8aa9-406f-9f65-e46b42cd27ce
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-09-07T18:31:38.807+05:30  INFO 56808 --- [Company] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-09-07T18:31:40.983+05:30  INFO 56808 --- [Company] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-09-07T18:31:41.051+05:30  INFO 56808 --- [Company] [main] com.example.demo.CompanyApplication      : Started CompanyApplication in 37.475 seconds (process running for 38.285)
+2026-09-07T18:34:59.486+05:30  INFO 56808 --- [Company] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-07T18:34:59.503+05:30  INFO 56808 --- [Company] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-07T18:34:59.716+05:30  INFO 56808 --- [Company] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 194 ms
+2026-09-07T18:35:08.071+05:30  INFO 56808 --- [Company] [http-nio-8080-exec-5] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 5525 ms
+2026-09-07T18:35:32.040+05:30  WARN 56808 --- [Company] [http-nio-8080-exec-4] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [2,790] milliseconds.
+2026-09-07T18:39:47.634+05:30  INFO 38512 --- [Company] [main] com.example.demo.CompanyApplication      : Starting CompanyApplication using Java 17.0.12 with PID 38512 (C:\Users\saipr\git\Library\Company\target\classes started by saipr in C:\Users\saipr\git\Library\Company)
+2026-09-07T18:39:47.641+05:30 DEBUG 38512 --- [Company] [main] com.example.demo.CompanyApplication      : Running with Spring Boot v3.5.5, Spring v6.2.10
+2026-09-07T18:39:47.644+05:30  INFO 38512 --- [Company] [main] com.example.demo.CompanyApplication      : The following 1 profile is active: "dev"
+2026-09-07T18:39:52.985+05:30  INFO 38512 --- [Company] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-07T18:39:53.161+05:30  INFO 38512 --- [Company] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 138 ms. Found 1 JPA repository interface.
+2026-09-07T18:39:57.493+05:30  INFO 38512 --- [Company] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-09-07T18:39:57.563+05:30  INFO 38512 --- [Company] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-07T18:39:57.570+05:30  INFO 38512 --- [Company] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2026-09-07T18:39:58.147+05:30  INFO 38512 --- [Company] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-07T18:39:58.150+05:30  INFO 38512 --- [Company] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 10303 ms
+2026-09-07T18:40:01.455+05:30  INFO 38512 --- [Company] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-09-07T18:40:02.174+05:30  INFO 38512 --- [Company] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2026-09-07T18:40:02.606+05:30  INFO 38512 --- [Company] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-09-07T18:40:04.867+05:30  INFO 38512 --- [Company] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-07T18:40:05.039+05:30  INFO 38512 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-07T18:40:05.445+05:30  INFO 38512 --- [Company] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4e3ffd0
+2026-09-07T18:40:05.453+05:30  INFO 38512 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-07T18:40:05.676+05:30  INFO 38512 --- [Company] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-07T18:40:07.668+05:30  INFO 38512 --- [Company] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-07T18:40:07.785+05:30  INFO 38512 --- [Company] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-07T18:40:08.996+05:30  WARN 38512 --- [Company] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-07T18:40:10.288+05:30  INFO 38512 --- [Company] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoints beneath base path '/actuator'
+2026-09-07T18:40:10.445+05:30  WARN 38512 --- [Company] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: d83bd19e-d124-4293-85f2-6d67b4d4dc2d
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-09-07T18:40:10.483+05:30  INFO 38512 --- [Company] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-09-07T18:40:12.425+05:30  INFO 38512 --- [Company] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-09-07T18:40:12.508+05:30  INFO 38512 --- [Company] [main] com.example.demo.CompanyApplication      : Started CompanyApplication in 26.254 seconds (process running for 27.056)
+2026-09-07T18:44:26.720+05:30  INFO 49508 --- [Company] [main] com.example.demo.CompanyApplication      : Starting CompanyApplication using Java 17.0.12 with PID 49508 (C:\Users\saipr\git\Library\Company\target\classes started by saipr in C:\Users\saipr\git\Library\Company)
+2026-09-07T18:44:26.727+05:30 DEBUG 49508 --- [Company] [main] com.example.demo.CompanyApplication      : Running with Spring Boot v3.5.5, Spring v6.2.10
+2026-09-07T18:44:26.730+05:30  INFO 49508 --- [Company] [main] com.example.demo.CompanyApplication      : The following 1 profile is active: "prod"
+2026-09-07T18:44:30.477+05:30  INFO 49508 --- [Company] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-07T18:44:30.646+05:30  INFO 49508 --- [Company] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 136 ms. Found 1 JPA repository interface.
+2026-09-07T18:44:33.691+05:30  INFO 49508 --- [Company] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-09-07T18:44:33.747+05:30  INFO 49508 --- [Company] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-07T18:44:33.748+05:30  INFO 49508 --- [Company] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2026-09-07T18:44:34.004+05:30  INFO 49508 --- [Company] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-07T18:44:34.005+05:30  INFO 49508 --- [Company] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 7106 ms
+2026-09-07T18:44:34.929+05:30  INFO 49508 --- [Company] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-09-07T18:44:35.209+05:30  INFO 49508 --- [Company] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2026-09-07T18:44:35.332+05:30  INFO 49508 --- [Company] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-09-07T18:44:36.211+05:30  INFO 49508 --- [Company] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-07T18:44:36.348+05:30  INFO 49508 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-07T18:44:36.857+05:30  INFO 49508 --- [Company] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@53d808ea
+2026-09-07T18:44:36.866+05:30  INFO 49508 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-07T18:44:37.061+05:30  INFO 49508 --- [Company] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-07T18:44:38.589+05:30  INFO 49508 --- [Company] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-07T18:44:38.716+05:30  INFO 49508 --- [Company] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-07T18:44:40.290+05:30  WARN 49508 --- [Company] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-07T18:44:41.441+05:30  INFO 49508 --- [Company] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoints beneath base path '/actuator'
+2026-09-07T18:44:41.595+05:30  WARN 49508 --- [Company] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: cb3d1ebc-f7fb-4d12-b185-6292504bdd40
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-09-07T18:44:41.632+05:30  INFO 49508 --- [Company] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-09-07T18:44:43.434+05:30  WARN 49508 --- [Company] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-09-07T18:44:43.451+05:30  INFO 49508 --- [Company] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-07T18:44:43.461+05:30  INFO 49508 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-07T18:44:43.494+05:30  INFO 49508 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-07T18:44:43.572+05:30  INFO 49508 --- [Company] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-09-07T18:44:43.653+05:30 ERROR 49508 --- [Company] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2026-09-07T18:46:02.175+05:30  INFO 60056 --- [Company] [main] com.example.demo.CompanyApplication      : Starting CompanyApplication using Java 17.0.12 with PID 60056 (C:\Users\saipr\git\Library\Company\target\classes started by saipr in C:\Users\saipr\git\Library\Company)
+2026-09-07T18:46:02.184+05:30 DEBUG 60056 --- [Company] [main] com.example.demo.CompanyApplication      : Running with Spring Boot v3.5.5, Spring v6.2.10
+2026-09-07T18:46:02.187+05:30  INFO 60056 --- [Company] [main] com.example.demo.CompanyApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-09-07T18:46:06.034+05:30  INFO 60056 --- [Company] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-07T18:46:06.243+05:30  INFO 60056 --- [Company] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 162 ms. Found 1 JPA repository interface.
+2026-09-07T18:46:08.613+05:30  INFO 60056 --- [Company] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-09-07T18:46:08.653+05:30  INFO 60056 --- [Company] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-07T18:46:08.654+05:30  INFO 60056 --- [Company] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2026-09-07T18:46:08.882+05:30  INFO 60056 --- [Company] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-07T18:46:08.887+05:30  INFO 60056 --- [Company] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6492 ms
+2026-09-07T18:46:09.935+05:30  INFO 60056 --- [Company] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-09-07T18:46:10.181+05:30  INFO 60056 --- [Company] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2026-09-07T18:46:10.329+05:30  INFO 60056 --- [Company] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-09-07T18:46:11.440+05:30  INFO 60056 --- [Company] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-07T18:46:11.585+05:30  INFO 60056 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-07T18:46:12.286+05:30  INFO 60056 --- [Company] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@14499b52
+2026-09-07T18:46:12.297+05:30  INFO 60056 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-07T18:46:12.530+05:30  INFO 60056 --- [Company] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-07T18:46:14.402+05:30  INFO 60056 --- [Company] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-07T18:46:14.484+05:30  INFO 60056 --- [Company] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-07T18:46:15.768+05:30  WARN 60056 --- [Company] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-07T18:46:16.930+05:30  INFO 60056 --- [Company] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoints beneath base path '/actuator'
+2026-09-07T18:46:17.060+05:30  WARN 60056 --- [Company] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: b1d8491e-00c5-48c4-bbd9-4b71615801df
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-09-07T18:46:17.097+05:30  INFO 60056 --- [Company] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-09-07T18:46:18.946+05:30  WARN 60056 --- [Company] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-09-07T18:46:18.961+05:30  INFO 60056 --- [Company] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-07T18:46:18.971+05:30  INFO 60056 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-07T18:46:19.001+05:30  INFO 60056 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-07T18:46:19.085+05:30  INFO 60056 --- [Company] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-09-07T18:46:19.201+05:30 ERROR 60056 --- [Company] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2026-09-07T18:48:00.045+05:30  INFO 18160 --- [Company] [main] com.example.demo.CompanyApplication      : Starting CompanyApplication using Java 17.0.12 with PID 18160 (C:\Users\saipr\git\Library\Company\target\classes started by saipr in C:\Users\saipr\git\Library\Company)
+2026-09-07T18:48:00.055+05:30 DEBUG 18160 --- [Company] [main] com.example.demo.CompanyApplication      : Running with Spring Boot v3.5.5, Spring v6.2.10
+2026-09-07T18:48:00.058+05:30  INFO 18160 --- [Company] [main] com.example.demo.CompanyApplication      : The following 1 profile is active: "dev"
+2026-09-07T18:48:04.239+05:30  INFO 18160 --- [Company] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-07T18:48:04.484+05:30  INFO 18160 --- [Company] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 199 ms. Found 1 JPA repository interface.
+2026-09-07T18:48:06.920+05:30  INFO 18160 --- [Company] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-09-07T18:48:06.961+05:30  INFO 18160 --- [Company] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-07T18:48:06.963+05:30  INFO 18160 --- [Company] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2026-09-07T18:48:07.205+05:30  INFO 18160 --- [Company] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-07T18:48:07.206+05:30  INFO 18160 --- [Company] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6961 ms
+2026-09-07T18:48:08.182+05:30  INFO 18160 --- [Company] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-09-07T18:48:08.482+05:30  INFO 18160 --- [Company] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2026-09-07T18:48:08.655+05:30  INFO 18160 --- [Company] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-09-07T18:48:09.631+05:30  INFO 18160 --- [Company] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-07T18:48:09.771+05:30  INFO 18160 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-07T18:48:10.328+05:30  INFO 18160 --- [Company] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5d6b5d3d
+2026-09-07T18:48:10.336+05:30  INFO 18160 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-07T18:48:10.537+05:30  INFO 18160 --- [Company] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-07T18:48:12.918+05:30  INFO 18160 --- [Company] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-07T18:48:13.024+05:30  INFO 18160 --- [Company] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-07T18:48:14.560+05:30  WARN 18160 --- [Company] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-07T18:48:15.824+05:30  INFO 18160 --- [Company] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoints beneath base path '/actuator'
+2026-09-07T18:48:15.961+05:30  WARN 18160 --- [Company] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 17f4ba40-8c77-4e6d-8260-dcdffcd253fc
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-09-07T18:48:15.998+05:30  INFO 18160 --- [Company] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-09-07T18:48:17.576+05:30  WARN 18160 --- [Company] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-09-07T18:48:17.587+05:30  INFO 18160 --- [Company] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-07T18:48:17.596+05:30  INFO 18160 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-07T18:48:17.626+05:30  INFO 18160 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-07T18:48:17.694+05:30  INFO 18160 --- [Company] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-09-07T18:48:17.777+05:30 ERROR 18160 --- [Company] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2026-09-07T18:50:45.766+05:30  INFO 34972 --- [Company] [main] com.example.demo.CompanyApplication      : Starting CompanyApplication using Java 17.0.12 with PID 34972 (C:\Users\saipr\git\Library\Company\target\classes started by saipr in C:\Users\saipr\git\Library\Company)
+2026-09-07T18:50:45.774+05:30 DEBUG 34972 --- [Company] [main] com.example.demo.CompanyApplication      : Running with Spring Boot v3.5.5, Spring v6.2.10
+2026-09-07T18:50:45.777+05:30  INFO 34972 --- [Company] [main] com.example.demo.CompanyApplication      : The following 1 profile is active: "dev"
+2026-09-07T18:50:50.472+05:30  INFO 34972 --- [Company] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-07T18:50:50.662+05:30  INFO 34972 --- [Company] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 142 ms. Found 1 JPA repository interface.
+2026-09-07T18:50:53.739+05:30  INFO 34972 --- [Company] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2026-09-07T18:50:53.796+05:30  INFO 34972 --- [Company] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-07T18:50:53.798+05:30  INFO 34972 --- [Company] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2026-09-07T18:50:54.089+05:30  INFO 34972 --- [Company] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-07T18:50:54.092+05:30  INFO 34972 --- [Company] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 8129 ms
+2026-09-07T18:50:55.067+05:30  INFO 34972 --- [Company] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-09-07T18:50:55.305+05:30  INFO 34972 --- [Company] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2026-09-07T18:50:55.482+05:30  INFO 34972 --- [Company] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-09-07T18:50:56.689+05:30  INFO 34972 --- [Company] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-07T18:50:56.805+05:30  INFO 34972 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-07T18:50:57.357+05:30  INFO 34972 --- [Company] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@464d5365
+2026-09-07T18:50:57.365+05:30  INFO 34972 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-07T18:50:57.602+05:30  INFO 34972 --- [Company] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-07T18:50:59.518+05:30  INFO 34972 --- [Company] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-07T18:50:59.600+05:30  INFO 34972 --- [Company] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-07T18:51:00.842+05:30  WARN 34972 --- [Company] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-07T18:51:01.825+05:30  INFO 34972 --- [Company] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoints beneath base path '/actuator'
+2026-09-07T18:51:01.958+05:30  WARN 34972 --- [Company] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 8bc05eaa-27df-485e-8f03-addfcaa5046f
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-09-07T18:51:01.987+05:30  INFO 34972 --- [Company] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-09-07T18:51:03.617+05:30  INFO 34972 --- [Company] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2026-09-07T18:51:03.669+05:30  INFO 34972 --- [Company] [main] com.example.demo.CompanyApplication      : Started CompanyApplication in 19.624 seconds (process running for 20.633)
+2026-09-07T18:51:26.340+05:30  INFO 34972 --- [Company] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-07T18:51:26.344+05:30  INFO 34972 --- [Company] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-07T18:51:26.358+05:30  INFO 34972 --- [Company] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2026-09-07T18:53:21.588+05:30  INFO 61300 --- [Company] [main] com.example.demo.CompanyApplication      : Starting CompanyApplication using Java 17.0.12 with PID 61300 (C:\Users\saipr\git\Library\Company\target\classes started by saipr in C:\Users\saipr\git\Library\Company)
+2026-09-07T18:53:21.595+05:30 DEBUG 61300 --- [Company] [main] com.example.demo.CompanyApplication      : Running with Spring Boot v3.5.5, Spring v6.2.10
+2026-09-07T18:53:21.598+05:30  INFO 61300 --- [Company] [main] com.example.demo.CompanyApplication      : The following 1 profile is active: "dev"
+2026-09-07T18:53:25.929+05:30  INFO 61300 --- [Company] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-07T18:53:26.232+05:30  INFO 61300 --- [Company] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 261 ms. Found 1 JPA repository interface.
+2026-09-07T18:53:28.699+05:30  INFO 61300 --- [Company] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2026-09-07T18:53:28.746+05:30  INFO 61300 --- [Company] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-07T18:53:28.747+05:30  INFO 61300 --- [Company] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2026-09-07T18:53:28.973+05:30  INFO 61300 --- [Company] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-07T18:53:28.976+05:30  INFO 61300 --- [Company] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 7168 ms
+2026-09-07T18:53:29.980+05:30  INFO 61300 --- [Company] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-09-07T18:53:30.317+05:30  INFO 61300 --- [Company] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2026-09-07T18:53:30.502+05:30  INFO 61300 --- [Company] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-09-07T18:53:32.168+05:30  INFO 61300 --- [Company] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-07T18:53:32.350+05:30  INFO 61300 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-07T18:53:35.030+05:30  INFO 61300 --- [Company] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@48860139
+2026-09-07T18:53:35.038+05:30  INFO 61300 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-07T18:53:35.407+05:30  INFO 61300 --- [Company] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-07T18:53:39.191+05:30  INFO 61300 --- [Company] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-07T18:53:39.407+05:30  INFO 61300 --- [Company] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-07T18:53:41.793+05:30  WARN 61300 --- [Company] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityFilterChain' defined in class path resource [com/example/demo/company/config/SecurityConfig.class]: Unsatisfied dependency expressed through method 'securityFilterChain' parameter 0: No qualifying bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2026-09-07T18:53:41.805+05:30  INFO 61300 --- [Company] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-07T18:53:41.824+05:30  INFO 61300 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-07T18:53:41.930+05:30  INFO 61300 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-07T18:53:41.943+05:30  INFO 61300 --- [Company] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-09-07T18:53:42.070+05:30  INFO 61300 --- [Company] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-09-07T18:53:42.179+05:30 ERROR 61300 --- [Company] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method securityFilterChain in com.example.demo.company.config.SecurityConfig required a bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' in your configuration.
+
+2026-09-07T18:54:12.836+05:30  INFO 61540 --- [Company] [main] com.example.demo.CompanyApplication      : Starting CompanyApplication using Java 17.0.12 with PID 61540 (C:\Users\saipr\git\Library\Company\target\classes started by saipr in C:\Users\saipr\git\Library\Company)
+2026-09-07T18:54:12.846+05:30 DEBUG 61540 --- [Company] [main] com.example.demo.CompanyApplication      : Running with Spring Boot v3.5.5, Spring v6.2.10
+2026-09-07T18:54:12.851+05:30  INFO 61540 --- [Company] [main] com.example.demo.CompanyApplication      : The following 1 profile is active: "dev"
+2026-09-07T18:54:19.000+05:30  INFO 61540 --- [Company] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-07T18:54:19.405+05:30  INFO 61540 --- [Company] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 309 ms. Found 1 JPA repository interface.
+2026-09-07T18:54:23.662+05:30  INFO 61540 --- [Company] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2026-09-07T18:54:23.734+05:30  INFO 61540 --- [Company] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-07T18:54:23.736+05:30  INFO 61540 --- [Company] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2026-09-07T18:54:24.159+05:30  INFO 61540 --- [Company] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-07T18:54:24.168+05:30  INFO 61540 --- [Company] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 11083 ms
+2026-09-07T18:54:25.703+05:30  INFO 61540 --- [Company] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-09-07T18:54:26.102+05:30  INFO 61540 --- [Company] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2026-09-07T18:54:26.340+05:30  INFO 61540 --- [Company] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-09-07T18:54:28.063+05:30  INFO 61540 --- [Company] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-07T18:54:28.238+05:30  INFO 61540 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-07T18:54:29.001+05:30  INFO 61540 --- [Company] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3e489ac1
+2026-09-07T18:54:29.013+05:30  INFO 61540 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-07T18:54:29.331+05:30  INFO 61540 --- [Company] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-07T18:54:35.154+05:30  INFO 61540 --- [Company] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-07T18:54:35.875+05:30  INFO 61540 --- [Company] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-07T18:54:38.316+05:30  WARN 61540 --- [Company] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityFilterChain' defined in class path resource [com/example/demo/company/config/SecurityConfig.class]: Unsatisfied dependency expressed through method 'securityFilterChain' parameter 0: No qualifying bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2026-09-07T18:54:38.319+05:30  INFO 61540 --- [Company] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-07T18:54:38.337+05:30  INFO 61540 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-07T18:54:38.846+05:30  INFO 61540 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-07T18:54:38.860+05:30  INFO 61540 --- [Company] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-09-07T18:54:38.972+05:30  INFO 61540 --- [Company] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-09-07T18:54:39.127+05:30 ERROR 61540 --- [Company] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method securityFilterChain in com.example.demo.company.config.SecurityConfig required a bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' in your configuration.
+
+2026-09-07T18:56:28.711+05:30  INFO 59352 --- [Company] [main] com.example.demo.CompanyApplication      : Starting CompanyApplication using Java 17.0.12 with PID 59352 (C:\Users\saipr\git\Library\Company\target\classes started by saipr in C:\Users\saipr\git\Library\Company)
+2026-09-07T18:56:28.721+05:30 DEBUG 59352 --- [Company] [main] com.example.demo.CompanyApplication      : Running with Spring Boot v3.5.5, Spring v6.2.10
+2026-09-07T18:56:28.725+05:30  INFO 59352 --- [Company] [main] com.example.demo.CompanyApplication      : The following 1 profile is active: "dev"
+2026-09-07T18:56:33.921+05:30  INFO 59352 --- [Company] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-07T18:56:34.184+05:30  INFO 59352 --- [Company] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 212 ms. Found 1 JPA repository interface.
+2026-09-07T18:56:37.649+05:30  INFO 59352 --- [Company] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-09-07T18:56:37.699+05:30  INFO 59352 --- [Company] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-07T18:56:37.700+05:30  INFO 59352 --- [Company] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2026-09-07T18:56:37.946+05:30  INFO 59352 --- [Company] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-07T18:56:37.948+05:30  INFO 59352 --- [Company] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 9019 ms
+2026-09-07T18:56:38.985+05:30  INFO 59352 --- [Company] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-09-07T18:56:39.258+05:30  INFO 59352 --- [Company] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2026-09-07T18:56:39.425+05:30  INFO 59352 --- [Company] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-09-07T18:56:40.334+05:30  INFO 59352 --- [Company] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-07T18:56:40.462+05:30  INFO 59352 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-07T18:56:40.955+05:30  INFO 59352 --- [Company] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@552088cc
+2026-09-07T18:56:40.960+05:30  INFO 59352 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-07T18:56:41.151+05:30  INFO 59352 --- [Company] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-07T18:56:43.078+05:30  INFO 59352 --- [Company] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-07T18:56:43.166+05:30  INFO 59352 --- [Company] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-07T18:56:44.199+05:30  WARN 59352 --- [Company] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-07T18:56:44.297+05:30  WARN 59352 --- [Company] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: e2193654-fddc-493f-bf1b-da7689e17207
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-09-07T18:56:44.324+05:30  INFO 59352 --- [Company] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-09-07T18:56:45.460+05:30  INFO 59352 --- [Company] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoints beneath base path '/actuator'
+2026-09-07T18:56:46.799+05:30  INFO 59352 --- [Company] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-09-07T18:56:46.850+05:30  INFO 59352 --- [Company] [main] com.example.demo.CompanyApplication      : Started CompanyApplication in 19.716 seconds (process running for 20.291)
+2026-09-07T18:57:27.870+05:30  INFO 59352 --- [Company] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-07T18:57:27.896+05:30  INFO 59352 --- [Company] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-07T18:57:27.955+05:30  INFO 59352 --- [Company] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 59 ms
+2026-09-07T18:57:28.854+05:30  INFO 59352 --- [Company] [http-nio-8080-exec-1] Companylogger                            : Fetching companies with pagination
+2026-09-07T18:57:31.030+05:30  WARN 59352 --- [Company] [http-nio-8080-exec-1] ration$PageModule$WarningLoggingModifier : Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2026-09-07T18:57:31.810+05:30  WARN 59352 --- [Company] [http-nio-8080-exec-2] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [249] milliseconds.
+2026-09-07T18:59:04.195+05:30  INFO 59352 --- [Company] [http-nio-8080-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 3854 ms
+2026-09-07T19:04:10.407+05:30  INFO 34388 --- [Company] [main] com.example.demo.CompanyApplication      : Starting CompanyApplication using Java 17.0.12 with PID 34388 (C:\Users\saipr\git\Library\Company\target\classes started by saipr in C:\Users\saipr\git\Library\Company)
+2026-09-07T19:04:10.416+05:30 DEBUG 34388 --- [Company] [main] com.example.demo.CompanyApplication      : Running with Spring Boot v3.5.5, Spring v6.2.10
+2026-09-07T19:04:10.420+05:30  INFO 34388 --- [Company] [main] com.example.demo.CompanyApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-09-07T19:04:14.674+05:30  INFO 34388 --- [Company] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-07T19:04:14.958+05:30  INFO 34388 --- [Company] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 230 ms. Found 1 JPA repository interface.
+2026-09-07T19:04:18.602+05:30  INFO 34388 --- [Company] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-09-07T19:04:18.689+05:30  INFO 34388 --- [Company] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-07T19:04:18.691+05:30  INFO 34388 --- [Company] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2026-09-07T19:04:19.096+05:30  INFO 34388 --- [Company] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-07T19:04:19.097+05:30  INFO 34388 --- [Company] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 8451 ms
+2026-09-07T19:04:20.492+05:30  INFO 34388 --- [Company] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-09-07T19:04:20.826+05:30  INFO 34388 --- [Company] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2026-09-07T19:04:21.042+05:30  INFO 34388 --- [Company] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-09-07T19:04:22.483+05:30  INFO 34388 --- [Company] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-07T19:04:22.657+05:30  INFO 34388 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-07T19:04:23.611+05:30  INFO 34388 --- [Company] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@35555145
+2026-09-07T19:04:23.623+05:30  INFO 34388 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-07T19:04:23.923+05:30  INFO 34388 --- [Company] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-07T19:04:26.329+05:30  INFO 34388 --- [Company] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-07T19:04:26.436+05:30  INFO 34388 --- [Company] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-07T19:04:27.499+05:30  WARN 34388 --- [Company] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityFilterChain' defined in class path resource [com/example/demo/company/config/SecurityConfig.class]: Unsatisfied dependency expressed through method 'securityFilterChain' parameter 0: No qualifying bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2026-09-07T19:04:27.500+05:30  INFO 34388 --- [Company] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-07T19:04:27.508+05:30  INFO 34388 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-07T19:04:27.531+05:30  INFO 34388 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-07T19:04:27.539+05:30  INFO 34388 --- [Company] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-09-07T19:04:27.582+05:30  INFO 34388 --- [Company] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-09-07T19:04:27.661+05:30 ERROR 34388 --- [Company] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method securityFilterChain in com.example.demo.company.config.SecurityConfig required a bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' in your configuration.
+
+2026-09-07T19:05:35.899+05:30  INFO 62392 --- [Company] [main] com.example.demo.CompanyApplication      : Starting CompanyApplication using Java 17.0.12 with PID 62392 (C:\Users\saipr\git\Library\Company\target\classes started by saipr in C:\Users\saipr\git\Library\Company)
+2026-09-07T19:05:35.903+05:30 DEBUG 62392 --- [Company] [main] com.example.demo.CompanyApplication      : Running with Spring Boot v3.5.5, Spring v6.2.10
+2026-09-07T19:05:35.904+05:30  INFO 62392 --- [Company] [main] com.example.demo.CompanyApplication      : The following 1 profile is active: "dev"
+2026-09-07T19:05:39.563+05:30  INFO 62392 --- [Company] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-07T19:05:39.813+05:30  INFO 62392 --- [Company] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 208 ms. Found 1 JPA repository interface.
+2026-09-07T19:05:42.614+05:30  INFO 62392 --- [Company] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-09-07T19:05:42.675+05:30  INFO 62392 --- [Company] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-07T19:05:42.677+05:30  INFO 62392 --- [Company] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2026-09-07T19:05:43.000+05:30  INFO 62392 --- [Company] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-07T19:05:43.001+05:30  INFO 62392 --- [Company] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6962 ms
+2026-09-07T19:05:43.888+05:30  INFO 62392 --- [Company] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-09-07T19:05:44.150+05:30  INFO 62392 --- [Company] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2026-09-07T19:05:44.323+05:30  INFO 62392 --- [Company] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-09-07T19:05:45.522+05:30  INFO 62392 --- [Company] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-07T19:05:45.647+05:30  INFO 62392 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-07T19:05:46.219+05:30  INFO 62392 --- [Company] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@84a9f65
+2026-09-07T19:05:46.226+05:30  INFO 62392 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-07T19:05:46.452+05:30  INFO 62392 --- [Company] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-07T19:05:49.434+05:30  INFO 62392 --- [Company] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-07T19:05:49.577+05:30  INFO 62392 --- [Company] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-07T19:05:50.893+05:30  WARN 62392 --- [Company] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-07T19:05:51.026+05:30  WARN 62392 --- [Company] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: faeef96b-3b83-484b-a087-34b5f7862916
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-09-07T19:05:51.070+05:30  INFO 62392 --- [Company] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-09-07T19:05:52.464+05:30  INFO 62392 --- [Company] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoints beneath base path '/actuator'
+2026-09-07T19:05:53.789+05:30  WARN 62392 --- [Company] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-09-07T19:05:53.802+05:30  INFO 62392 --- [Company] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-07T19:05:53.811+05:30  INFO 62392 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-07T19:05:53.837+05:30  INFO 62392 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-07T19:05:53.894+05:30  INFO 62392 --- [Company] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-09-07T19:05:53.975+05:30 ERROR 62392 --- [Company] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2026-09-07T19:06:47.538+05:30  INFO 10288 --- [Company] [main] com.example.demo.CompanyApplication      : Starting CompanyApplication using Java 17.0.12 with PID 10288 (C:\Users\saipr\git\Library\Company\target\classes started by saipr in C:\Users\saipr\git\Library\Company)
+2026-09-07T19:06:47.547+05:30 DEBUG 10288 --- [Company] [main] com.example.demo.CompanyApplication      : Running with Spring Boot v3.5.5, Spring v6.2.10
+2026-09-07T19:06:47.550+05:30  INFO 10288 --- [Company] [main] com.example.demo.CompanyApplication      : The following 1 profile is active: "dev"
+2026-09-07T19:06:51.095+05:30  INFO 10288 --- [Company] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-07T19:06:51.244+05:30  INFO 10288 --- [Company] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 122 ms. Found 1 JPA repository interface.
+2026-09-07T19:06:52.896+05:30  INFO 10288 --- [Company] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-09-07T19:06:52.940+05:30  INFO 10288 --- [Company] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-07T19:06:52.941+05:30  INFO 10288 --- [Company] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2026-09-07T19:06:53.103+05:30  INFO 10288 --- [Company] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-07T19:06:53.105+05:30  INFO 10288 --- [Company] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5360 ms
+2026-09-07T19:06:54.134+05:30  INFO 10288 --- [Company] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-09-07T19:06:54.441+05:30  INFO 10288 --- [Company] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2026-09-07T19:06:54.640+05:30  INFO 10288 --- [Company] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-09-07T19:06:55.553+05:30  INFO 10288 --- [Company] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-07T19:06:55.663+05:30  INFO 10288 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-07T19:06:56.106+05:30  INFO 10288 --- [Company] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27210a3b
+2026-09-07T19:06:56.113+05:30  INFO 10288 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-07T19:06:56.272+05:30  INFO 10288 --- [Company] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-07T19:06:58.256+05:30  INFO 10288 --- [Company] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-07T19:06:58.355+05:30  INFO 10288 --- [Company] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-07T19:06:59.438+05:30  WARN 10288 --- [Company] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-07T19:06:59.531+05:30  WARN 10288 --- [Company] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 1a7f3f5b-6910-4065-8f37-61a6607f8fb3
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-09-07T19:06:59.560+05:30  INFO 10288 --- [Company] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-09-07T19:07:01.078+05:30  INFO 10288 --- [Company] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoints beneath base path '/actuator'
+2026-09-07T19:07:02.463+05:30  INFO 10288 --- [Company] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-09-07T19:07:02.502+05:30  INFO 10288 --- [Company] [main] com.example.demo.CompanyApplication      : Started CompanyApplication in 16.574 seconds (process running for 17.513)
+2026-09-07T19:07:31.280+05:30  INFO 10288 --- [Company] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-07T19:07:31.289+05:30  INFO 10288 --- [Company] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-07T19:07:31.319+05:30  INFO 10288 --- [Company] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 30 ms
+2026-09-07T19:07:31.763+05:30  INFO 10288 --- [Company] [http-nio-8080-exec-1] Companylogger                            : Fetching companies with pagination
+2026-09-07T19:07:33.004+05:30  WARN 10288 --- [Company] [http-nio-8080-exec-1] ration$PageModule$WarningLoggingModifier : Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2026-09-07T19:07:33.740+05:30  WARN 10288 --- [Company] [http-nio-8080-exec-2] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [175] milliseconds.
+2026-09-07T19:10:47.062+05:30  INFO 8152 --- [Company] [main] com.example.demo.CompanyApplication      : Starting CompanyApplication using Java 17.0.12 with PID 8152 (C:\Users\saipr\git\Library\Company\target\classes started by saipr in C:\Users\saipr\git\Library\Company)
+2026-09-07T19:10:47.071+05:30 DEBUG 8152 --- [Company] [main] com.example.demo.CompanyApplication      : Running with Spring Boot v3.5.5, Spring v6.2.10
+2026-09-07T19:10:47.073+05:30  INFO 8152 --- [Company] [main] com.example.demo.CompanyApplication      : The following 1 profile is active: "dev"
+2026-09-07T19:10:50.050+05:30  INFO 8152 --- [Company] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-07T19:10:50.206+05:30  INFO 8152 --- [Company] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 127 ms. Found 1 JPA repository interface.
+2026-09-07T19:10:52.185+05:30  INFO 8152 --- [Company] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-09-07T19:10:52.255+05:30  INFO 8152 --- [Company] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-07T19:10:52.257+05:30  INFO 8152 --- [Company] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2026-09-07T19:10:52.586+05:30  INFO 8152 --- [Company] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-07T19:10:52.588+05:30  INFO 8152 --- [Company] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5379 ms
+2026-09-07T19:10:53.541+05:30  INFO 8152 --- [Company] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-09-07T19:10:53.727+05:30  INFO 8152 --- [Company] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2026-09-07T19:10:53.864+05:30  INFO 8152 --- [Company] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-09-07T19:10:54.788+05:30  INFO 8152 --- [Company] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-07T19:10:54.898+05:30  INFO 8152 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-07T19:10:55.294+05:30  INFO 8152 --- [Company] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@ca60688
+2026-09-07T19:10:55.304+05:30  INFO 8152 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-07T19:10:55.504+05:30  INFO 8152 --- [Company] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-07T19:10:56.790+05:30  INFO 8152 --- [Company] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-07T19:10:56.874+05:30  INFO 8152 --- [Company] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-07T19:10:57.758+05:30  WARN 8152 --- [Company] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityFilterChain' defined in class path resource [com/example/demo/company/config/SecurityConfig.class]: Unsatisfied dependency expressed through method 'securityFilterChain' parameter 0: No qualifying bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2026-09-07T19:10:57.761+05:30  INFO 8152 --- [Company] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-07T19:10:57.772+05:30  INFO 8152 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-07T19:10:57.810+05:30  INFO 8152 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-07T19:10:57.819+05:30  INFO 8152 --- [Company] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-09-07T19:10:57.891+05:30  INFO 8152 --- [Company] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-09-07T19:10:58.003+05:30 ERROR 8152 --- [Company] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method securityFilterChain in com.example.demo.company.config.SecurityConfig required a bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' in your configuration.
+
+2026-09-07T19:13:45.005+05:30  INFO 57728 --- [Company] [main] com.example.demo.CompanyApplication      : Starting CompanyApplication using Java 17.0.12 with PID 57728 (C:\Users\saipr\git\Library\Company\target\classes started by saipr in C:\Users\saipr\git\Library\Company)
+2026-09-07T19:13:45.013+05:30 DEBUG 57728 --- [Company] [main] com.example.demo.CompanyApplication      : Running with Spring Boot v3.5.5, Spring v6.2.10
+2026-09-07T19:13:45.015+05:30  INFO 57728 --- [Company] [main] com.example.demo.CompanyApplication      : The following 1 profile is active: "dev"
+2026-09-07T19:13:48.625+05:30  INFO 57728 --- [Company] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-07T19:13:48.877+05:30  INFO 57728 --- [Company] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 210 ms. Found 1 JPA repository interface.
+2026-09-07T19:13:51.458+05:30  INFO 57728 --- [Company] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-09-07T19:13:51.519+05:30  INFO 57728 --- [Company] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-07T19:13:51.521+05:30  INFO 57728 --- [Company] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2026-09-07T19:13:51.841+05:30  INFO 57728 --- [Company] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-07T19:13:51.843+05:30  INFO 57728 --- [Company] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6640 ms
+2026-09-07T19:13:52.717+05:30  INFO 57728 --- [Company] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-09-07T19:13:52.988+05:30  INFO 57728 --- [Company] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2026-09-07T19:13:53.142+05:30  INFO 57728 --- [Company] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-09-07T19:13:54.199+05:30  INFO 57728 --- [Company] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-07T19:13:54.321+05:30  INFO 57728 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-07T19:13:54.990+05:30  INFO 57728 --- [Company] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27210a3b
+2026-09-07T19:13:55.000+05:30  INFO 57728 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-07T19:13:55.332+05:30  INFO 57728 --- [Company] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-07T19:13:57.168+05:30  INFO 57728 --- [Company] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-07T19:13:57.297+05:30  INFO 57728 --- [Company] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-07T19:13:58.891+05:30  WARN 57728 --- [Company] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-07T19:13:59.024+05:30  WARN 57728 --- [Company] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: c79ecebf-a36b-4e94-b671-858ede34b038
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-09-07T19:13:59.058+05:30  INFO 57728 --- [Company] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-09-07T19:14:00.363+05:30  INFO 57728 --- [Company] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoints beneath base path '/actuator'
+2026-09-07T19:14:01.868+05:30  INFO 57728 --- [Company] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-09-07T19:14:01.915+05:30  INFO 57728 --- [Company] [main] com.example.demo.CompanyApplication      : Started CompanyApplication in 18.423 seconds (process running for 19.393)
+2026-09-07T19:14:33.448+05:30  INFO 57728 --- [Company] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-07T19:14:33.450+05:30  INFO 57728 --- [Company] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-07T19:14:33.461+05:30  INFO 57728 --- [Company] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-09-07T19:14:33.827+05:30  INFO 57728 --- [Company] [http-nio-8080-exec-1] Companylogger                            : Fetching companies with pagination
+2026-09-07T19:14:34.887+05:30  WARN 57728 --- [Company] [http-nio-8080-exec-1] ration$PageModule$WarningLoggingModifier : Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2026-09-07T19:14:35.453+05:30  WARN 57728 --- [Company] [http-nio-8080-exec-2] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [128] milliseconds.
+2026-09-07T19:18:24.529+05:30  INFO 62844 --- [Company] [main] com.example.demo.CompanyApplication      : Starting CompanyApplication using Java 17.0.12 with PID 62844 (C:\Users\saipr\git\Library\Company\target\classes started by saipr in C:\Users\saipr\git\Library\Company)
+2026-09-07T19:18:24.539+05:30 DEBUG 62844 --- [Company] [main] com.example.demo.CompanyApplication      : Running with Spring Boot v3.5.5, Spring v6.2.10
+2026-09-07T19:18:24.541+05:30  INFO 62844 --- [Company] [main] com.example.demo.CompanyApplication      : The following 1 profile is active: "dev"
+2026-09-07T19:18:27.643+05:30  INFO 62844 --- [Company] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-07T19:18:27.821+05:30  INFO 62844 --- [Company] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 143 ms. Found 1 JPA repository interface.
+2026-09-07T19:18:30.476+05:30  INFO 62844 --- [Company] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-09-07T19:18:30.518+05:30  INFO 62844 --- [Company] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-07T19:18:30.519+05:30  INFO 62844 --- [Company] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2026-09-07T19:18:30.749+05:30  INFO 62844 --- [Company] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-07T19:18:30.751+05:30  INFO 62844 --- [Company] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6018 ms
+2026-09-07T19:18:31.567+05:30  INFO 62844 --- [Company] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-09-07T19:18:31.825+05:30  INFO 62844 --- [Company] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2026-09-07T19:18:31.959+05:30  INFO 62844 --- [Company] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-09-07T19:18:32.807+05:30  INFO 62844 --- [Company] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-07T19:18:32.899+05:30  INFO 62844 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-07T19:18:33.286+05:30  INFO 62844 --- [Company] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1c2fb9e8
+2026-09-07T19:18:33.292+05:30  INFO 62844 --- [Company] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-07T19:18:33.446+05:30  INFO 62844 --- [Company] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-07T19:18:34.805+05:30  INFO 62844 --- [Company] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-07T19:18:34.960+05:30  INFO 62844 --- [Company] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-07T19:18:36.566+05:30  WARN 62844 --- [Company] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-07T19:18:36.690+05:30  WARN 62844 --- [Company] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 4151812c-f156-4a6c-8734-a98eb5be7401
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-09-07T19:18:36.727+05:30  INFO 62844 --- [Company] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-09-07T19:18:37.920+05:30  INFO 62844 --- [Company] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoints beneath base path '/actuator'
+2026-09-07T19:18:39.067+05:30  INFO 62844 --- [Company] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-09-07T19:18:39.098+05:30  INFO 62844 --- [Company] [main] com.example.demo.CompanyApplication      : Started CompanyApplication in 15.943 seconds (process running for 16.896)
+2026-09-07T19:19:44.713+05:30  INFO 62844 --- [Company] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-07T19:19:44.728+05:30  INFO 62844 --- [Company] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-07T19:19:44.784+05:30  INFO 62844 --- [Company] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 55 ms
+2026-09-07T19:19:45.358+05:30  INFO 62844 --- [Company] [http-nio-8080-exec-2] Companylogger                            : Fetching companies with pagination
+2026-09-07T19:19:46.629+05:30  WARN 62844 --- [Company] [http-nio-8080-exec-2] ration$PageModule$WarningLoggingModifier : Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2026-09-07T19:19:47.127+05:30  WARN 62844 --- [Company] [http-nio-8080-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [159] milliseconds.
