@@ -1,21 +1,23 @@
 package com.example.demo.company.service;
 
-import org.springframework.data.domain.Page;
-
 import com.example.demo.company.dto.CompanyRequestDto;
 import com.example.demo.company.dto.CompanyResponseDto;
 
+import java.util.List;
+
 public interface CompanyService {
 
-    CompanyResponseDto createOrUpdate(CompanyRequestDto requestDto);
+    CompanyResponseDto createCompany(CompanyRequestDto request);
 
-    CompanyResponseDto getById(Long id);
+    List<CompanyResponseDto> getAllCompanies();
 
-    Page<CompanyResponseDto> getAll(
-            int page,
-            int size,
-            String sortBy,
-            String direction);
+    CompanyResponseDto getCompanyById(Long id);
 
-    void deleteById(Long id);
+    CompanyResponseDto updateCompany(
+            Long id,
+            CompanyRequestDto request);
+
+    void deleteCompany(Long id);
+
+    CompanyResponseDto getProfile(String name);
 }

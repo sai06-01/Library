@@ -2,35 +2,26 @@ package com.example.demo.company.dto;
 
 public class LoginResponseDto {
 
-    private boolean success;
-
     private String message;
-
     private Long companyId;
-
     private String name;
+    private String email;
+    private String role;
 
     public LoginResponseDto() {
     }
 
-    public LoginResponseDto(
-            boolean success,
-            String message,
-            Long companyId,
-            String name) {
+    public LoginResponseDto(String message,
+                            Long companyId,
+                            String name,
+                            String email,
+                            String role) {
 
-        this.success = success;
         this.message = message;
         this.companyId = companyId;
         this.name = name;
-    }
-
-    public boolean isSuccess() {
-        return success;
-    }
-
-    public void setSuccess(boolean success) {
-        this.success = success;
+        this.email = email;
+        this.role = role;
     }
 
     public String getMessage() {
@@ -55,5 +46,21 @@ public class LoginResponseDto {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 }

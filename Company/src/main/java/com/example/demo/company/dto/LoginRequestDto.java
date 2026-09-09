@@ -1,20 +1,24 @@
 package com.example.demo.company.dto;
 
+import jakarta.validation.constraints.NotBlank;
+
 public class LoginRequestDto {
 
-    private String email;
+    @NotBlank(message = "Name is required")
+    private String name;
 
+    @NotBlank(message = "Password is required")
     private String password;
 
     public LoginRequestDto() {
     }
 
-    public String getEmail() {
-        return email;
+    public String getName() {
+        return name;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getPassword() {

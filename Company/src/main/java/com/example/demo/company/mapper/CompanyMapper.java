@@ -1,46 +1,50 @@
 package com.example.demo.company.mapper;
 
-import org.springframework.stereotype.Component;
-
 import com.example.demo.company.dto.CompanyRequestDto;
 import com.example.demo.company.dto.CompanyResponseDto;
 import com.example.demo.company.entity.Company;
+import org.springframework.stereotype.Component;
 
 @Component
 public class CompanyMapper {
 
-    public Company toEntity(CompanyRequestDto dto) {
+    public Company toEntity(CompanyRequestDto request) {
 
         Company company = new Company();
 
-        company.setName(dto.getName());
-        company.setEmail(dto.getEmail());
-        company.setPassword(dto.getPassword());
+        company.setName(request.getName());
+        company.setEmail(request.getEmail());
+        company.setPassword(request.getPassword());
+        company.setRole(request.getRole());
+        company.setStatus(request.getStatus());
 
         return company;
     }
 
-    public void updateEntity(
-            CompanyRequestDto dto,
-            Company company) {
+    public CompanyResponseDto toResponseDto(Company company) {
 
-        company.setName(dto.getName());
-        company.setEmail(dto.getEmail());
-        company.setPassword(dto.getPassword());
+        CompanyResponseDto response = new CompanyResponseDto();
+
+        response.setId(company.getId());
+        response.setName(company.getName());
+        response.setEmail(company.getEmail());
+        response.setRole(company.getRole());
+        response.setStatus(company.getStatus());
+        response.setVersion(company.getVersion());
+        response.setCreatedAt(company.getCreatedAt());
+        response.setUpdatedAt(company.getUpdatedAt());
+
+        return response;
     }
 
-    public CompanyResponseDto toResponseDto(
-            Company company) {
+    public void updateEntity(
+            Company company,
+            CompanyRequestDto request) {
 
-        return new CompanyResponseDto(
-                company.getId(),
-                company.getName(),
-                company.getEmail(),
-                company.getVersion(),
-                company.getCreatedDate(),
-                company.getCreatedBy(),
-                company.getUpdatedDate(),
-                company.getUpdatedBy()
-        );
+        company.setName(request.getName());
+        company.setEmail(request.getEmail());
+        company.setPassword(request.getPassword());
+        company.setRole(request.getRole());
+        company.setStatus(request.getStatus());
     }
 }

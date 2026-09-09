@@ -1,46 +1,22 @@
 package com.example.demo.company.dto;
 
+import com.example.demo.company.enums.CompanyRole;
+import com.example.demo.company.enums.CompanyStatus;
+
 import java.time.LocalDateTime;
 
 public class CompanyResponseDto {
 
     private Long id;
-
     private String name;
-
     private String email;
-
-    private Integer version;
-
-    private LocalDateTime createdDate;
-
-    private String createdBy;
-
-    private LocalDateTime updatedDate;
-
-    private String updatedBy;
+    private CompanyRole role;
+    private CompanyStatus status;
+    private Long version;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 
     public CompanyResponseDto() {
-    }
-
-    public CompanyResponseDto(
-            Long id,
-            String name,
-            String email,
-            Integer version,
-            LocalDateTime createdDate,
-            String createdBy,
-            LocalDateTime updatedDate,
-            String updatedBy) {
-
-        this.id = id;
-        this.name = name;
-        this.email = email;
-        this.version = version;
-        this.createdDate = createdDate;
-        this.createdBy = createdBy;
-        this.updatedDate = updatedDate;
-        this.updatedBy = updatedBy;
     }
 
     public Long getId() {
@@ -67,43 +43,43 @@ public class CompanyResponseDto {
         this.email = email;
     }
 
-    public Integer getVersion() {
+    public CompanyRole getRole() {
+        return role;
+    }
+
+    public void setRole(CompanyRole role) {
+        this.role = role;
+    }
+
+    public CompanyStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(CompanyStatus status) {
+        this.status = status;
+    }
+
+    public Long getVersion() {
         return version;
     }
 
-    public void setVersion(Integer version) {
+    public void setVersion(Long version) {
         this.version = version;
     }
 
-    public LocalDateTime getCreatedDate() {
-        return createdDate;
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
     }
 
-    public void setCreatedDate(LocalDateTime createdDate) {
-        this.createdDate = createdDate;
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
     }
 
-    public String getCreatedBy() {
-        return createdBy;
+    public LocalDateTime getUpdatedAt() {
+        return updatedAt;
     }
 
-    public void setCreatedBy(String createdBy) {
-        this.createdBy = createdBy;
-    }
-
-    public LocalDateTime getUpdatedDate() {
-        return updatedDate;
-    }
-
-    public void setUpdatedDate(LocalDateTime updatedDate) {
-        this.updatedDate = updatedDate;
-    }
-
-    public String getUpdatedBy() {
-        return updatedBy;
-    }
-
-    public void setUpdatedBy(String updatedBy) {
-        this.updatedBy = updatedBy;
+    public void setUpdatedAt(LocalDateTime updatedAt) {
+        this.updatedAt = updatedAt;
     }
 }

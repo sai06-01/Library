@@ -1,9 +1,11 @@
 package com.example.demo.company.exception;
 
-public class CompanyAlreadyExistsException
+public class ValidationException
         extends RuntimeException {
 
-    public CompanyAlreadyExistsException(String message) {
+    public ValidationException(
+            String message) {
+
         super(message);
     }
 }

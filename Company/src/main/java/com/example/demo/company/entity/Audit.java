@@ -1,61 +1,88 @@
 package com.example.demo.company.entity;
 
+import jakarta.persistence.*;
+
 import java.time.LocalDateTime;
 
-import org.springframework.data.annotation.CreatedBy;
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedBy;
-import org.springframework.data.annotation.LastModifiedDate;
-import org.springframework.data.jpa.domain.support.AuditingEntityListener;
-
-import jakarta.persistence.EntityListeners;
-import jakarta.persistence.MappedSuperclass;
-
-@MappedSuperclass
-@EntityListeners(AuditingEntityListener.class)
+@Entity
+@Table(name = "company_audit")
 public class Audit {
 
-    @CreatedDate
-    private LocalDateTime createdDate;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-    @CreatedBy
-    private String createdBy;
+    private String action;
 
-    @LastModifiedDate
-    private LocalDateTime updatedDate;
+    private Long companyId;
 
-    @LastModifiedBy
-    private String updatedBy;
+    private String performedBy;
 
-    public LocalDateTime getCreatedDate() {
-        return createdDate;
+    private LocalDateTime performedAt;
+
+    private String details;
+
+    public Audit() {
     }
 
-    public void setCreatedDate(LocalDateTime createdDate) {
-        this.createdDate = createdDate;
+    public Audit(String action,
+                 Long companyId,
+                 String performedBy,
+                 LocalDateTime performedAt,
+                 String details) {
+
+        this.action = action;
+        this.companyId = companyId;
+        this.performedBy = performedBy;
+        this.performedAt = performedAt;
+        this.details = details;
     }
 
-    public String getCreatedBy() {
-        return createdBy;
+    public Long getId() {
+        return id;
     }
 
-    public void setCreatedBy(String createdBy) {
-        this.createdBy = createdBy;
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public LocalDateTime getUpdatedDate() {
-        return updatedDate;
+    public String getAction() {
+        return action;
     }
 
-    public void setUpdatedDate(LocalDateTime updatedDate) {
-        this.updatedDate = updatedDate;
+    public void setAction(String action) {
+        this.action = action;
     }
 
-    public String getUpdatedBy() {
-        return updatedBy;
+    public Long getCompanyId() {
+        return companyId;
     }
 
-    public void setUpdatedBy(String updatedBy) {
-        this.updatedBy = updatedBy;
+    public void setCompanyId(Long companyId) {
+        this.companyId = companyId;
+    }
+
+    public String getPerformedBy() {
+        return performedBy;
+    }
+
+    public void setPerformedBy(String performedBy) {
+        this.performedBy = performedBy;
+    }
+
+    public LocalDateTime getPerformedAt() {
+        return performedAt;
+    }
+
+    public void setPerformedAt(LocalDateTime performedAt) {
+        this.performedAt = performedAt;
+    }
+
+    public String getDetails() {
+        return details;
+    }
+
+    public void setDetails(String details) {
+        this.details = details;
     }
 }

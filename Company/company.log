@@ -6,3 +6,5 @@ Sep 07, 2026 7:14:33 PM com.example.demo.company.logger.CompanyLogger info
 INFO: Fetching companies with pagination
 Sep 07, 2026 7:19:45 PM com.example.demo.company.logger.CompanyLogger info
 INFO: Fetching companies with pagination
+Sep 08, 2026 2:19:00 PM com.example.demo.company.logger.CompanyLogger info
+INFO: Fetching companies with pagination

@@ -1,30 +1,25 @@
 package com.example.demo.company.exception;
 
 import java.time.LocalDateTime;
+import java.util.Map;
 
 public class ErrorResponse {
 
-    private LocalDateTime timestamp;
     private int status;
-    private String error;
-    private String message;
+
+    private Map<String, String> errors;
+
+    private LocalDateTime timestamp;
 
     public ErrorResponse() {
     }
 
-    public ErrorResponse(LocalDateTime timestamp, int status,
-                         String error, String message) {
-        this.timestamp = timestamp;
+    public ErrorResponse(int status,
+                         Map<String, String> errors,
+                         LocalDateTime timestamp) {
+
         this.status = status;
-        this.error = error;
-        this.message = message;
-    }
-
-    public LocalDateTime getTimestamp() {
-        return timestamp;
-    }
-
-    public void setTimestamp(LocalDateTime timestamp) {
+        this.errors = errors;
         this.timestamp = timestamp;
     }
 
@@ -36,19 +31,19 @@ public class ErrorResponse {
         this.status = status;
     }
 
-    public String getError() {
-        return error;
+    public Map<String, String> getErrors() {
+        return errors;
     }
 
-    public void setError(String error) {
-        this.error = error;
+    public void setErrors(Map<String, String> errors) {
+        this.errors = errors;
     }
 
-    public String getMessage() {
-        return message;
+    public LocalDateTime getTimestamp() {
+        return timestamp;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
+    public void setTimestamp(LocalDateTime timestamp) {
+        this.timestamp = timestamp;
     }
 }

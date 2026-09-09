@@ -1,11 +1,11 @@
 package com.example.demo.company.dto;
 
+import com.example.demo.company.enums.CompanyRole;
+import com.example.demo.company.enums.CompanyStatus;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 
 public class CompanyRequestDto {
-
-    private Long id;
 
     @NotBlank(message = "Name is required")
     private String name;
@@ -17,15 +17,11 @@ public class CompanyRequestDto {
     @NotBlank(message = "Password is required")
     private String password;
 
+    private CompanyRole role;
+
+    private CompanyStatus status;
+
     public CompanyRequestDto() {
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getName() {
@@ -50,5 +46,21 @@ public class CompanyRequestDto {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public CompanyRole getRole() {
+        return role;
+    }
+
+    public void setRole(CompanyRole role) {
+        this.role = role;
+    }
+
+    public CompanyStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(CompanyStatus status) {
+        this.status = status;
     }
 }

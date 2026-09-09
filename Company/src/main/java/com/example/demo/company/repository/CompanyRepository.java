@@ -1,13 +1,14 @@
 package com.example.demo.company.repository;
 
-import java.util.Optional;
-
+import com.example.demo.company.entity.Company;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.example.demo.company.entity.Company;
+import java.util.Optional;
 
 public interface CompanyRepository
         extends JpaRepository<Company, Long> {
 
-    Optional<Company> findByEmail(String email);
+    boolean existsByEmail(String email);
+
+    Optional<Company> findByName(String name);
 }

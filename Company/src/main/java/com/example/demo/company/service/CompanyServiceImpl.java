@@ -1,139 +1,129 @@
 package com.example.demo.company.service;
 
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
-import org.springframework.stereotype.Service;
-
 import com.example.demo.company.dto.CompanyRequestDto;
 import com.example.demo.company.dto.CompanyResponseDto;
 import com.example.demo.company.entity.Company;
+import com.example.demo.company.exception.CompanyAlreadyExistsException;
 import com.example.demo.company.exception.CompanyNotFoundException;
-import com.example.demo.company.logger.CompanyLogger;
 import com.example.demo.company.mapper.CompanyMapper;
 import com.example.demo.company.repository.CompanyRepository;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import jakarta.transaction.Transactional;
+import java.util.List;
 
 @Service
+@Transactional
 public class CompanyServiceImpl implements CompanyService {
 
     private final CompanyRepository companyRepository;
     private final CompanyMapper companyMapper;
-    private final CompanyLogger companyLogger;
 
     public CompanyServiceImpl(
             CompanyRepository companyRepository,
-            CompanyMapper companyMapper,
-            CompanyLogger companyLogger) {
+            CompanyMapper companyMapper) {
 
         this.companyRepository = companyRepository;
         this.companyMapper = companyMapper;
-        this.companyLogger = companyLogger;
     }
 
     @Override
-    @Transactional
-    public CompanyResponseDto createOrUpdate(
-            CompanyRequestDto requestDto) {
+    public CompanyResponseDto createCompany(
+            CompanyRequestDto request) {
 
-        Company company;
-
-        // CREATE
-        if (requestDto.getId() == null) {
-
-            companyLogger.info("Creating new company");
-
-            company = companyMapper.toEntity(requestDto);
-
-        } else {
-
-            // UPDATE
-            companyLogger.info(
-                    "Updating company with id: "
-                            + requestDto.getId());
-
-            company = companyRepository
-                    .findById(requestDto.getId())
-                    .orElseThrow(() ->
-                            new CompanyNotFoundException(
-                                    "Company not found with id: "
-                                            + requestDto.getId()));
-
-            companyMapper.updateEntity(
-                    requestDto,
-                    company);
+        if (companyRepository.existsByEmail(request.getEmail())) {
+            throw new CompanyAlreadyExistsException(
+                    "Company with email already exists: "
+                            + request.getEmail()
+            );
         }
+
+        Company company = companyMapper.toEntity(request);
 
         Company savedCompany =
                 companyRepository.save(company);
-
-        companyLogger.info(
-                "Company saved successfully");
 
         return companyMapper.toResponseDto(savedCompany);
     }
 
     @Override
-    public CompanyResponseDto getById(Long id) {
+    @Transactional(readOnly = true)
+    public List<CompanyResponseDto> getAllCompanies() {
 
-        companyLogger.info(
-                "Fetching company with id: " + id);
+        return companyRepository.findAll()
+                .stream()
+                .map(companyMapper::toResponseDto)
+                .toList();
+    }
 
-        Company company = companyRepository
-                .findById(id)
+    @Override
+    @Transactional(readOnly = true)
+    public CompanyResponseDto getCompanyById(Long id) {
+
+        Company company = companyRepository.findById(id)
                 .orElseThrow(() ->
                         new CompanyNotFoundException(
-                                "Company not found with id: "
-                                        + id));
+                                "Company not found with id: " + id
+                        ));
 
         return companyMapper.toResponseDto(company);
     }
 
     @Override
-    public Page<CompanyResponseDto> getAll(
-            int page,
-            int size,
-            String sortBy,
-            String direction) {
+    @Transactional(readOnly = true)
+    public CompanyResponseDto getProfile(String name) {
 
-        companyLogger.info(
-                "Fetching companies with pagination");
+        Company company =
+                companyRepository.findByName(name)
+                        .orElseThrow(() ->
+                                new CompanyNotFoundException(
+                                        "Company not found with name: "
+                                                + name
+                                ));
 
-        Sort sort;
-
-        if (direction.equalsIgnoreCase("desc")) {
-            sort = Sort.by(sortBy).descending();
-        } else {
-            sort = Sort.by(sortBy).ascending();
-        }
-
-        Pageable pageable =
-                PageRequest.of(page, size, sort);
-
-        return companyRepository
-                .findAll(pageable)
-                .map(companyMapper::toResponseDto);
+        return companyMapper.toResponseDto(company);
     }
 
     @Override
-    @Transactional
-    public void deleteById(Long id) {
+    public CompanyResponseDto updateCompany(
+            Long id,
+            CompanyRequestDto request) {
 
-        companyLogger.info(
-                "Deleting company with id: " + id);
+        Company existingCompany =
+                companyRepository.findById(id)
+                        .orElseThrow(() ->
+                                new CompanyNotFoundException(
+                                        "Company not found with id: "
+                                                + id
+                                ));
 
-        Company company = companyRepository
-                .findById(id)
-                .orElseThrow(() ->
-                        new CompanyNotFoundException(
-                                "Company not found with id: "
-                                        + id));
+        /*
+         * Version is NOT updated manually.
+         * Hibernate @Version updates it automatically.
+         */
+        existingCompany.setName(request.getName());
+        existingCompany.setEmail(request.getEmail());
+        existingCompany.setPassword(request.getPassword());
+        existingCompany.setRole(request.getRole());
+        existingCompany.setStatus(request.getStatus());
+
+        Company updatedCompany =
+                companyRepository.save(existingCompany);
+
+        return companyMapper.toResponseDto(updatedCompany);
+    }
+
+    @Override
+    public void deleteCompany(Long id) {
+
+        Company company =
+                companyRepository.findById(id)
+                        .orElseThrow(() ->
+                                new CompanyNotFoundException(
+                                        "Company not found with id: "
+                                                + id
+                                ));
 
         companyRepository.delete(company);
-
-        companyLogger.info(
-                "Company deleted successfully");
     }
 }
