@@ -1,0 +1,63 @@
+2026-09-16T10:10:00.205+05:30  INFO 12172 --- [Agriculture-Farm-Management] [main] e.d.AgricultureFarmManagementApplication : Starting AgricultureFarmManagementApplication using Java 17.0.12 with PID 12172 (C:\Users\saipr\Documents\workspace-spring-tools-for-eclipse-5.3.0.RELEASE\AgricultureFarmManagementApplication\target\classes started by saipr in C:\Users\saipr\Documents\workspace-spring-tools-for-eclipse-5.3.0.RELEASE\AgricultureFarmManagementApplication)
+2026-09-16T10:10:00.265+05:30  INFO 12172 --- [Agriculture-Farm-Management] [main] e.d.AgricultureFarmManagementApplication : The following 1 profile is active: "dev"
+2026-09-16T10:10:08.019+05:30  INFO 12172 --- [Agriculture-Farm-Management] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-16T10:10:08.755+05:30  INFO 12172 --- [Agriculture-Farm-Management] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 641 ms. Found 8 JPA repository interfaces.
+2026-09-16T10:10:13.515+05:30  INFO 12172 --- [Agriculture-Farm-Management] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-09-16T10:10:13.563+05:30  INFO 12172 --- [Agriculture-Farm-Management] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-16T10:10:13.564+05:30  INFO 12172 --- [Agriculture-Farm-Management] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2026-09-16T10:10:13.858+05:30  INFO 12172 --- [Agriculture-Farm-Management] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-16T10:10:13.859+05:30  INFO 12172 --- [Agriculture-Farm-Management] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 13233 ms
+2026-09-16T10:10:15.330+05:30  INFO 12172 --- [Agriculture-Farm-Management] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-09-16T10:10:15.809+05:30  INFO 12172 --- [Agriculture-Farm-Management] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2026-09-16T10:10:16.065+05:30  INFO 12172 --- [Agriculture-Farm-Management] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-09-16T10:10:18.130+05:30  INFO 12172 --- [Agriculture-Farm-Management] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-16T10:10:18.421+05:30  INFO 12172 --- [Agriculture-Farm-Management] [main] com.zaxxer.hikari.HikariDataSource       : AgricultureHikariPool - Starting...
+2026-09-16T10:10:19.461+05:30  INFO 12172 --- [Agriculture-Farm-Management] [main] com.zaxxer.hikari.pool.HikariPool        : AgricultureHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@6516181f
+2026-09-16T10:10:19.473+05:30  INFO 12172 --- [Agriculture-Farm-Management] [main] com.zaxxer.hikari.HikariDataSource       : AgricultureHikariPool - Start completed.
+2026-09-16T10:10:19.915+05:30  INFO 12172 --- [Agriculture-Farm-Management] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (AgricultureHikariPool)']
+	Database driver: undefined/unknown
+	Database version: 8.0.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-16T10:10:24.349+05:30  INFO 12172 --- [Agriculture-Farm-Management] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-16T10:10:24.780+05:30  INFO 12172 --- [Agriculture-Farm-Management] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-16T10:10:26.645+05:30  INFO 12172 --- [Agriculture-Farm-Management] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-09-16T10:10:28.130+05:30  INFO 12172 --- [Agriculture-Farm-Management] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoints beneath base path '/actuator'
+2026-09-16T10:10:30.097+05:30  INFO 12172 --- [Agriculture-Farm-Management] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-09-16T10:10:30.187+05:30  INFO 12172 --- [Agriculture-Farm-Management] [main] e.d.AgricultureFarmManagementApplication : Started AgricultureFarmManagementApplication in 32.862 seconds (process running for 39.661)
+2026-09-16T10:10:31.500+05:30  INFO 12172 --- [Agriculture-Farm-Management] [scheduling-1] AgricultureLogger                        : Scheduled agriculture report. Total farms = 4
+2026-09-16T10:11:00.092+05:30  INFO 32704 --- [Agriculture-Farm-Management] [main] e.d.AgricultureFarmManagementApplication : Starting AgricultureFarmManagementApplication using Java 17.0.12 with PID 32704 (C:\Users\saipr\Documents\workspace-spring-tools-for-eclipse-5.3.0.RELEASE\AgricultureFarmManagementApplication\target\classes started by saipr in C:\Users\saipr\Documents\workspace-spring-tools-for-eclipse-5.3.0.RELEASE\AgricultureFarmManagementApplication)
+2026-09-16T10:11:00.099+05:30  INFO 32704 --- [Agriculture-Farm-Management] [main] e.d.AgricultureFarmManagementApplication : The following 1 profile is active: "dev"
+2026-09-16T10:11:05.319+05:30  INFO 32704 --- [Agriculture-Farm-Management] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-16T10:11:05.708+05:30  INFO 32704 --- [Agriculture-Farm-Management] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 330 ms. Found 8 JPA repository interfaces.
+2026-09-16T10:11:09.391+05:30  INFO 32704 --- [Agriculture-Farm-Management] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-09-16T10:11:09.483+05:30  INFO 32704 --- [Agriculture-Farm-Management] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-16T10:11:09.484+05:30  INFO 32704 --- [Agriculture-Farm-Management] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2026-09-16T10:11:09.887+05:30  INFO 32704 --- [Agriculture-Farm-Management] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-16T10:11:09.890+05:30  INFO 32704 --- [Agriculture-Farm-Management] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 9624 ms
+2026-09-16T10:11:11.839+05:30  INFO 32704 --- [Agriculture-Farm-Management] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-09-16T10:11:12.274+05:30  INFO 32704 --- [Agriculture-Farm-Management] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2026-09-16T10:11:12.498+05:30  INFO 32704 --- [Agriculture-Farm-Management] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-09-16T10:11:14.461+05:30  INFO 32704 --- [Agriculture-Farm-Management] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-16T10:11:14.693+05:30  INFO 32704 --- [Agriculture-Farm-Management] [main] com.zaxxer.hikari.HikariDataSource       : AgricultureHikariPool - Starting...
+2026-09-16T10:11:15.888+05:30  INFO 32704 --- [Agriculture-Farm-Management] [main] com.zaxxer.hikari.pool.HikariPool        : AgricultureHikariPool - Added connection com.mysql.cj.jdbc.ConnectionImpl@44a13699
+2026-09-16T10:11:15.905+05:30  INFO 32704 --- [Agriculture-Farm-Management] [main] com.zaxxer.hikari.HikariDataSource       : AgricultureHikariPool - Start completed.
+2026-09-16T10:11:16.371+05:30  INFO 32704 --- [Agriculture-Farm-Management] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (AgricultureHikariPool)']
+	Database driver: undefined/unknown
+	Database version: 8.0.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-16T10:11:20.098+05:30  INFO 32704 --- [Agriculture-Farm-Management] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-16T10:11:20.338+05:30  INFO 32704 --- [Agriculture-Farm-Management] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-16T10:11:22.002+05:30  INFO 32704 --- [Agriculture-Farm-Management] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-09-16T10:11:23.202+05:30  INFO 32704 --- [Agriculture-Farm-Management] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoints beneath base path '/actuator'
+2026-09-16T10:11:25.329+05:30  INFO 32704 --- [Agriculture-Farm-Management] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-09-16T10:11:25.389+05:30  INFO 32704 --- [Agriculture-Farm-Management] [main] e.d.AgricultureFarmManagementApplication : Started AgricultureFarmManagementApplication in 27.136 seconds (process running for 28.757)
+2026-09-16T10:11:26.675+05:30  INFO 32704 --- [Agriculture-Farm-Management] [scheduling-1] AgricultureLogger                        : Scheduled agriculture report. Total farms = 4
+2026-09-16T10:11:55.412+05:30  INFO 32704 --- [Agriculture-Farm-Management] [scheduling-1] AgricultureLogger                        : Scheduled agriculture report. Total farms = 4
